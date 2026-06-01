@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Recommendation Engine | Alip Kamate</title>
+    <title>Book Metadata Pipeline | Alip Kamate</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,6 +32,7 @@
     />
     <link rel="manifest" href="../../assets/favicon_io/site.webmanifest" />
     <link rel="stylesheet" href="../../assets/site.css" />
+    <link rel="stylesheet" href="../../assets/valorant-theme.css" />
   </head>
   <body class="page-book-project">
     <canvas id="network-canvas"></canvas>
@@ -49,28 +50,28 @@
 
       <ul class="nav-links" id="nav-links">
         <li>
-          <a href="/#about" onclick="toggleMenu()"
+          <a href="../../index.html#about" onclick="toggleMenu()"
             ><span class="text-accent mono">01.</span> About</a
           >
         </li>
         <li>
-          <a href="/#skills" onclick="toggleMenu()"
+          <a href="../../index.html#skills" onclick="toggleMenu()"
             ><span class="text-accent mono">02.</span> Skills</a
           >
         </li>
         <li>
-          <a href="/#projects" onclick="toggleMenu()"
+          <a href="../../index.html#projects" onclick="toggleMenu()"
             ><span class="text-accent mono">03.</span> Projects</a
           >
         </li>
         <li>
-          <a href="/resume.html"
+          <a href="../../resume.html"
             ><span class="text-accent mono">04.</span> Resume</a
           >
         </li>
         <li>
           <a
-            href="/#contact"
+            href="../../index.html#contact"
             class="btn-primary nav-cta-compact"
             onclick="toggleMenu()"
             >Contact</a
@@ -93,11 +94,11 @@
       <div class="container">
         <header class="project-header fade-up">
           <h2 class="section-title">
-            <span class="section-number">PRJ.</span>Book Recommendation Engine
+            <span class="section-number">PRJ.</span>Book Metadata Pipeline
           </h2>
           <div class="project-meta">
-            <span class="badge badge--outline mono">Scraping, preprocessing, and similarity search</span>
-            <span class="badge badge--outline mono">Content-based recommendations from raw catalog data</span>
+            <span class="badge badge--outline mono">Scraping, cleaning, and feature tables</span>
+            <span class="badge badge--outline mono">A data product built from raw catalog data</span>
           </div>
         </header>
 
@@ -106,63 +107,62 @@
             <section class="case-card">
               <h3>Problem</h3>
               <p>
-                Book discovery becomes frustrating when a catalog is large but
-                the browsing experience is weak. I wanted a system that could
-                take one book and surface other relevant titles based on actual
-                content instead of random popularity.
+                Book catalogs contain useful metadata, but raw scraped data is
+                messy: missing descriptions, inconsistent authors, duplicate
+                titles, and uneven categories. I wanted a pipeline that turns
+                that raw catalog into clean tables for search, recommendations,
+                and reporting.
               </p>
             </section>
 
             <section class="case-card">
               <h3>Why I built it</h3>
               <p>
-                I wanted to understand recommendation systems end to end, not
-                only as a model inside a notebook. That meant collecting the
-                raw data myself, shaping it into a usable dataset, building the
-                retrieval logic, and then presenting the output in a frontend
-                that feels like a real product.
+                This project shows data engineering fundamentals through a
+                familiar data product. The useful work is not only the final
+                recommendations; it is the ingestion, cleaning, schema design,
+                feature preparation, and reproducible handoff to the app layer.
               </p>
             </section>
 
             <section class="case-card">
               <h3>How it works</h3>
               <ul>
-                <li>Scrape titles, authors, descriptions, and other metadata.</li>
-                <li>Clean the dataset so the important text fields are usable.</li>
-                <li>Transform descriptions into vectors with TF-IDF.</li>
-                <li>Retrieve similar books through content-based similarity search.</li>
-                <li>Show the recommendations through a SvelteKit interface.</li>
+                <li>Scrape titles, authors, descriptions, categories, and ratings.</li>
+                <li>Normalize text fields and remove unusable or duplicate records.</li>
+                <li>Create clean staging tables before feature generation.</li>
+                <li>Build feature tables for TF-IDF retrieval and catalog browsing.</li>
+                <li>Expose the prepared data through a lightweight product interface.</li>
               </ul>
             </section>
 
             <section class="case-card">
               <h3>Key decisions</h3>
               <ul>
-                <li>Used content-based retrieval because rich metadata was available.</li>
-                <li>Chose TF-IDF as a strong baseline for text similarity.</li>
-                <li>Kept the frontend lightweight so the recommendation flow stays clear.</li>
-                <li>Designed the project as a full pipeline, not only a model demo.</li>
+                <li>Separated raw, cleaned, and feature-ready datasets.</li>
+                <li>Kept transformations readable so pipeline behavior is easy to audit.</li>
+                <li>Used TF-IDF as a simple downstream consumer of the prepared data.</li>
+                <li>Designed the project as a data pipeline first and a recommender second.</li>
               </ul>
             </section>
 
             <section class="case-card">
               <h3>What I learned</h3>
               <p>
-                This project helped me understand recommendation work as a data
-                systems problem: scraping, cleaning, feature construction,
-                vectorization, retrieval, and presentation all matter. A useful
-                recommender depends as much on clean data and sensible product
-                flow as it does on the model itself.
+                This project helped me understand that data products depend on
+                dependable upstream work. Clean schema choices, validation, and
+                reproducible transformations matter as much as the recommendation
+                logic sitting at the end of the pipeline.
               </p>
             </section>
 
             <section class="case-card">
               <h3>What I'd improve next</h3>
               <ul>
-                <li>Refine feature weighting across description, genre, and author fields.</li>
-                <li>Add better filtering and comparison inside the frontend.</li>
-                <li>Test stronger retrieval methods on top of the current baseline.</li>
-                <li>Introduce evaluation notes to compare recommendation quality over time.</li>
+                <li>Add dbt-style tests for uniqueness, nulls, and accepted categories.</li>
+                <li>Schedule refreshes and track pipeline runtime in a simple log table.</li>
+                <li>Store catalog snapshots so changes can be compared over time.</li>
+                <li>Add data documentation for each cleaned table and feature field.</li>
               </ul>
             </section>
           </article>
@@ -174,10 +174,10 @@
                 <span class="badge badge--secondary tech-badge">Python</span>
                 <span class="badge badge--secondary tech-badge">Scrapy</span>
                 <span class="badge badge--secondary tech-badge">Pandas</span>
+                <span class="badge badge--secondary tech-badge">SQL-ready Tables</span>
                 <span class="badge badge--secondary tech-badge">Scikit-Learn</span>
-                <span class="badge badge--secondary tech-badge">TF-IDF</span>
                 <span class="badge badge--secondary tech-badge">SvelteKit</span>
-                <span class="badge badge--secondary tech-badge">Content-Based Retrieval</span>
+                <span class="badge badge--secondary tech-badge">Feature Engineering</span>
               </div>
             </div>
 
@@ -185,8 +185,8 @@
               <h3>Project Snapshot</h3>
               <ul class="sidebar-list">
                 <li><strong>Data source:</strong> scraped public book catalog</li>
-                <li><strong>Retrieval model:</strong> TF-IDF similarity search</li>
-                <li><strong>Main goal:</strong> faster book discovery from content</li>
+                <li><strong>Pipeline shape:</strong> raw, cleaned, and feature-ready tables</li>
+                <li><strong>Main goal:</strong> reliable metadata for search and recommendations</li>
                 <li><strong>User layer:</strong> SvelteKit browsing interface</li>
               </ul>
             </div>
@@ -194,14 +194,14 @@
             <div class="sidebar-card">
               <h3>Why it matters</h3>
               <p>
-                This project shows how I think about recommendation systems as
-                complete products, from raw data collection to the final user
-                interaction layer.
+                This project shows how I turn messy source data into a cleaner
+                dataset that can support product features, analytics, and model
+                experiments.
               </p>
             </div>
 
             <a
-              href="https://github.com/kamatealif/shelf-sage"
+              href="https://github.com/kamatealip/shelf-sage"
               class="btn-primary"
               target="_blank"
               rel="noreferrer"
@@ -209,7 +209,7 @@
               <i class="ph ph-light ph-github-logo"></i> View Repository
             </a>
 
-            <a href="/#projects" class="btn-primary">
+            <a href="../../index.html#projects" class="btn-primary">
               <i class="ph ph-light ph-arrow-left"></i> Back to Portfolio
             </a>
           </aside>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Local Document Search Engine | Alip Kamate</title>
+    <title>Local Document Indexing Pipeline | Alip Kamate</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,6 +31,7 @@
     />
     <link rel="manifest" href="../../assets/favicon_io/site.webmanifest" />
     <link rel="stylesheet" href="../../assets/site.css" />
+    <link rel="stylesheet" href="../../assets/valorant-theme.css" />
   </head>
   <body class="page-search-project">
     <canvas id="network-canvas"></canvas>
@@ -48,28 +49,28 @@
 
       <ul class="nav-links" id="nav-links">
         <li>
-          <a href="/#about" onclick="toggleMenu()"
+          <a href="../../index.html#about" onclick="toggleMenu()"
             ><span class="text-accent mono">01.</span> About</a
           >
         </li>
         <li>
-          <a href="/#skills" onclick="toggleMenu()"
+          <a href="../../index.html#skills" onclick="toggleMenu()"
             ><span class="text-accent mono">02.</span> Skills</a
           >
         </li>
         <li>
-          <a href="/#projects" onclick="toggleMenu()"
+          <a href="../../index.html#projects" onclick="toggleMenu()"
             ><span class="text-accent mono">03.</span> Projects</a
           >
         </li>
         <li>
-          <a href="/resume.html"
+          <a href="../../resume.html"
             ><span class="text-accent mono">04.</span> Resume</a
           >
         </li>
         <li>
           <a
-            href="/#contact"
+            href="../../index.html#contact"
             class="btn-primary nav-cta-compact"
             onclick="toggleMenu()"
             >Contact</a
@@ -92,11 +93,11 @@
       <div class="container">
         <header class="project-header fade-up">
           <h2 class="section-title">
-            <span class="section-number">PRJ.</span>Local Document Search Engine
+            <span class="section-number">PRJ.</span>Local Document Indexing Pipeline
           </h2>
           <div class="project-meta">
-            <span class="badge badge--outline mono">Local-first search and reading workflow</span>
-            <span class="badge badge--outline mono">Built for deep offline study and slower thinking</span>
+            <span class="badge badge--outline mono">Local ingestion, metadata, and ranked retrieval</span>
+            <span class="badge badge--outline mono">Built like a small private data platform</span>
           </div>
         </header>
 
@@ -105,67 +106,66 @@
             <section class="case-card">
               <h3>Problem</h3>
               <p>
-                When documents are spread across folders, notes, and reference
-                files, even simple searching becomes slow. I wanted a local tool
-                that could find the right document quickly and help me jump
-                straight into reading.
+                Documents spread across folders become hard to search, audit,
+                and reuse. I wanted a local indexing pipeline that scans files,
+                extracts text and metadata, stores structured entries, and makes
+                retrieval faster without sending private notes anywhere.
               </p>
             </section>
 
             <section class="case-card">
               <h3>Why I built it</h3>
               <p>
-                The main reason for building this project was to support offline
-                study sessions. I wanted to step away from the rush of the
-                internet, slow down, think properly, and solve problems by
-                working through my own notes and documents first.
+                The main reason for building this project was to practice data
+                ingestion and indexing on unstructured files. It behaves like a
+                small private data platform: sources are scanned, transformed
+                into searchable records, and served through a simple API.
               </p>
               <p>
-                That offline workflow helps me understand concepts more deeply
-                and implement them with better reasoning instead of depending on
-                constant external lookup.
+                The offline workflow also keeps the project grounded in a real
+                use case: focused study, local privacy, and quick movement from
+                query to useful context.
               </p>
             </section>
 
             <section class="case-card">
               <h3>How it works</h3>
               <ul>
-                <li>Scan local folders and register documents into an index.</li>
-                <li>Extract readable text and useful metadata from the files.</li>
-                <li>Store structured entries for quick lookup and ranking.</li>
-                <li>Return relevant results with enough context to start reading fast.</li>
-                <li>Keep the full search and reading workflow on the local machine.</li>
+                <li>Scan configured folders and detect supported document files.</li>
+                <li>Extract readable text, file paths, timestamps, and source metadata.</li>
+                <li>Load structured records into SQLite for quick lookup.</li>
+                <li>Rank matching documents and return useful context snippets.</li>
+                <li>Keep ingestion, storage, and search local to the machine.</li>
               </ul>
             </section>
 
             <section class="case-card">
               <h3>Key decisions</h3>
               <ul>
-                <li>Kept the system local-first for privacy, speed, and focus.</li>
-                <li>Prioritized readable results over a complex search interface.</li>
-                <li>Designed it as a study tool, not only as a retrieval demo.</li>
-                <li>Focused on making result-to-reading flow feel immediate.</li>
+                <li>Kept the system local-first for privacy and reproducibility.</li>
+                <li>Stored metadata separately from extracted content for cleaner querying.</li>
+                <li>Prioritized incremental indexing as the next production-style step.</li>
+                <li>Focused on making the result-to-reading flow immediate.</li>
               </ul>
             </section>
 
             <section class="case-card">
               <h3>What I learned</h3>
               <p>
-                This project taught me how much value there is in simple
-                retrieval systems when they are built around a real workflow.
-                Search quality is important, but so is the surrounding
-                experience: what gets indexed, how results are ranked, and how
-                quickly the user can move from query to understanding.
+                This project taught me how ingestion choices affect the final
+                search experience. File parsing, metadata consistency, storage
+                design, indexing, and API responses all shape whether a retrieval
+                workflow feels reliable.
               </p>
             </section>
 
             <section class="case-card">
               <h3>What I'd improve next</h3>
               <ul>
-                <li>Add richer ranking signals beyond straightforward keyword matching.</li>
-                <li>Support better previews for larger technical documents.</li>
-                <li>Introduce stronger filtering by folder, file type, and tags.</li>
-                <li>Make incremental re-indexing more efficient as files change.</li>
+                <li>Add incremental re-indexing when files change.</li>
+                <li>Add data quality checks for failed parses and empty extracts.</li>
+                <li>Introduce filtering by folder, file type, source, and tags.</li>
+                <li>Track indexing history and failures in operational tables.</li>
               </ul>
             </section>
           </article>
@@ -179,31 +179,31 @@
                 <span class="badge badge--secondary tech-badge">SQLite</span>
                 <span class="badge badge--secondary tech-badge">Search Indexing</span>
                 <span class="badge badge--secondary tech-badge">Text Extraction</span>
-                <span class="badge badge--secondary tech-badge">Local Retrieval</span>
+                <span class="badge badge--secondary tech-badge">Metadata Tables</span>
               </div>
             </div>
 
             <div class="sidebar-card project-meta-card">
               <h3>Project Snapshot</h3>
               <ul class="sidebar-list">
-                <li><strong>Main workflow:</strong> local indexing and ranked retrieval</li>
+                <li><strong>Main workflow:</strong> local ingestion and ranked retrieval</li>
                 <li><strong>Use case:</strong> offline study and focused reading</li>
                 <li><strong>Data source:</strong> personal and local document files</li>
-                <li><strong>Primary goal:</strong> faster search-to-reading flow</li>
+                <li><strong>Primary goal:</strong> structured search over unstructured files</li>
               </ul>
             </div>
 
             <div class="sidebar-card">
               <h3>Why it matters</h3>
               <p>
-                It turns scattered local files into something closer to a
-                personal knowledge base, but without losing the quiet,
-                offline-first workflow that motivated the project.
+                It shows how data engineering ideas apply beyond dashboards:
+                collect source data, normalize it, store useful metadata, and
+                make the result easy to query.
               </p>
             </div>
 
             <a
-              href="https://github.com/kamatealif/scout"
+              href="https://github.com/kamatealip/scout"
               class="btn-primary"
               target="_blank"
               rel="noreferrer"
@@ -211,7 +211,7 @@
               <i class="ph ph-light ph-github-logo"></i> View Repository
             </a>
 
-            <a href="/#projects" class="btn-primary">
+            <a href="../../index.html#projects" class="btn-primary">
               <i class="ph ph-light ph-arrow-left"></i> Back to Portfolio
             </a>
           </aside>
