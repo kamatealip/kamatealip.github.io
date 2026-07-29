@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Alip Kamate | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Alip Kamate, a data engineer focused on Python, SQL, data pipelines, search systems, and analytics."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -48,10 +52,10 @@
       }
 
       a {
-        color: var(--accent);
+        color: #ffffff;
         text-decoration: underline;
-        text-decoration-style: dotted;
-        text-decoration-color: #ffffff;
+        text-decoration-style: wavy;
+        text-decoration-color: var(--accent);
         text-underline-offset: 0.2em;
         padding-bottom: 0.08em;
       }
@@ -85,24 +89,30 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main>
-      <header style="margin-bottom: 1rem">
-        <h1 style="margin-bottom: 0.4rem">Alip Kamate</h1>
-        <p style="margin: 0.1rem 0 0.6rem"><strong>Data Engineer</strong></p>
-        <p style="margin: 0.1rem 0">Jath, Sangli, Maharashtra</p>
-        <p style="margin: 0.1rem 0">
-          Email:
-          <a href="mailto:kamatealip1@gmail.com">kamatealip1@gmail.com</a>
-        </p>
-        <p style="margin: 0.1rem 0 0.8rem">
-          Phone: <a href="tel:+917387705851">+91 7387705851</a>
-        </p>
-        <p style="margin: 0.2rem 0 0">
-          I build practical data solutions that turn raw information into clear,
-          reliable, and useful outcomes.
-        </p>
+      <header class="site-header" style="margin-bottom: 1rem">
+        <button class="rect-mark" type="button" aria-label="Accent marker"></button>
+        <div class="site-header-copy">
+          <h1 style="margin-bottom: 0.4rem">Alip Kamate</h1>
+          <p style="margin: 0.1rem 0 0.6rem">
+            <strong>Data Engineer</strong>
+          </p>
+          <p style="margin: 0.1rem 0">Jath, Sangli, Maharashtra</p>
+          <p style="margin: 0.1rem 0">
+            Email:
+            <a href="mailto:kamatealip1@gmail.com">kamatealip1@gmail.com</a>
+          </p>
+          <p style="margin: 0.1rem 0 0.8rem">
+            Phone: <a href="tel:+917387705851">+91 7387705851</a>
+          </p>
+          <p style="margin: 0.2rem 0 0">
+            I design practical data solutions that turn raw information into
+            reliable systems, clear insights, and useful decisions.
+          </p>
+        </div>
       </header>
 
       <hr />
@@ -110,9 +120,9 @@
       <section>
         <h2>Skills</h2>
         <p>
-          Python, SQL, Spark, AWS, Docker containers, Kafka, MongoDB, NoSQL,
-          orchestration tools, dbt, Power BI, Tableau, RAG pipelines, Graph DB,
-          Vector DB
+          Python, SQL, Apache Spark, AWS, Docker, Kafka, MongoDB, NoSQL,
+          orchestration tools, dbt, Power BI, Tableau, RAG pipelines, graph
+          databases, vector databases
         </p>
       </section>
 
@@ -134,22 +144,21 @@
       <section>
         <h2>Work Experience</h2>
         <p>
-          I don't have formal professional work experience yet, but I am gaining
-          practical experience by building projects that solve real-world
-          problems. I also completed a 6-month internship where I learned how to
-          turn ideas into working solutions with discipline, teamwork, and
-          consistent execution.
+          I am building hands-on experience through a six-month internship and
+          project-led work focused on data engineering, search, recommendations,
+          and automation. My focus is translating requirements into dependable,
+          usable solutions.
         </p>
         <ul>
           <li>
             <strong>Internship</strong> — 6 months<br />Worked on practical
-            development tasks, learned real-world problem solving, and improved
-            my ability to build useful solutions.
+            development tasks, collaborated with teammates, and strengthened my
+            ability to plan, build, and improve working solutions.
           </li>
           <li>
             <strong>Project-based learning</strong> — 2024 – Present<br />Built
-            applications and data solutions that focus on real needs such as
-            search, recommendation, and smart automation.
+            portfolio projects around document search, recommendation workflows,
+            traffic intelligence, and inventory analytics.
           </li>
         </ul>
       </section>
@@ -160,27 +169,29 @@
         <h2>Projects</h2>
         <ul>
           <li>
-            <a href="./projects/local-document-search/index.html"
+            <a href="./projects/local-document-search/"
               ><strong>Local Document Search Assistant</strong></a
-            ><br />Built a local-first search tool that helps users find
-            documents, metadata, and snippets quickly without needing a cloud
-            service.
+            ><br />Developed a local-first search assistant for indexing files,
+            extracting metadata, and returning relevant snippets without relying
+            on cloud storage.
           </li>
           <li>
-            <a href="./projects/book-recommendation/index.html"
+            <a href="./projects/book-recommendation/"
               ><strong>Book Recommendation Engine</strong></a
-            ><br />Created a recommendation-oriented data product that turns raw
-            book metadata into a more meaningful discovery experience.
+            ><br />Built a recommendation workflow that cleans book metadata and
+            ranks results to support more relevant content discovery.
           </li>
           <li>
-            <strong>Traffic Controller System</strong><br />Designed a practical
-            solution concept for improving traffic flow, vehicle monitoring, and
-            smarter decision-making in busy areas.
+            <a href="./projects/traffic-controller-system/"
+              ><strong>Traffic Controller System</strong></a
+            ><br />Designed a traffic-control concept for monitoring vehicle
+            flow and supporting data-driven signal decisions in busy areas.
           </li>
           <li>
-            <strong>Smart Inventory Management Tool</strong><br />Built a system
-            idea for tracking stock, reducing waste, and helping businesses make
-            faster operational decisions.
+            <a href="./projects/smart-inventory-management/"
+              ><strong>Smart Inventory Management Tool</strong></a
+            ><br />Outlined an inventory analytics tool for stock visibility,
+            waste reduction, and faster operational decisions.
           </li>
         </ul>
       </section>

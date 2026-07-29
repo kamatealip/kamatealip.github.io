@@ -1,0 +1,197 @@
+.site-header {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  position: relative;
+}
+
+.site-header-copy {
+  min-width: 0;
+}
+
+.rect-mark {
+  appearance: none;
+  border: 0;
+  display: inline-block;
+  position: relative;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-top: 0.15rem;
+  padding: 0;
+  background: var(--accent);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.14),
+    0 0 24px rgba(74, 222, 128, 0.2);
+  transform-origin: center;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-radius 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+  animation: rectangle-glow 4s ease-in-out infinite;
+}
+
+.rect-mark:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 0.35rem;
+}
+
+.rect-mark::before,
+.rect-mark::after {
+  content: "";
+  position: absolute;
+  width: 0.55rem;
+  height: 0.55rem;
+  background: #000000;
+  opacity: 0.46;
+  transition:
+    border-radius 0.2s ease,
+    transform 0.2s ease;
+}
+
+.rect-mark::before {
+  left: 0.55rem;
+  top: 0.55rem;
+}
+
+.rect-mark::after {
+  right: 0.55rem;
+  bottom: 0.55rem;
+}
+
+.rect-mark:hover {
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 0 34px rgba(74, 222, 128, 0.34);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.rect-mark:hover::before,
+.rect-mark:hover::after {
+  border-radius: 50%;
+}
+
+.rect-mark:active {
+  background: #f43841;
+  border-radius: 0;
+  transform: rotate(45deg) scale(0.95);
+}
+
+.rect-mark:active::before,
+.rect-mark:active::after {
+  border-radius: 0;
+  transform: rotate(-45deg);
+}
+
+main ul:not(.social-links) {
+  list-style: none;
+  padding-left: 1.45rem;
+}
+
+main ul:not(.social-links) > li {
+  position: relative;
+}
+
+main ul:not(.social-links) > li::before {
+  content: "";
+  position: absolute;
+  width: 0.58rem;
+  height: 0.58rem;
+  left: -1.35rem;
+  top: 0.62em;
+  background: var(--accent);
+  transition:
+    background 0.2s ease,
+    border-radius 0.2s ease,
+    transform 0.2s ease;
+}
+
+main ul:not(.social-links) > li:hover::before {
+  border-radius: 50%;
+  transform: scale(1.18);
+}
+
+main ul:not(.social-links) > li:active::before {
+  background: #f43841;
+  border-radius: 0;
+  transform: rotate(45deg) scale(1.06);
+}
+
+body:has(.rect-mark:hover) main ul:not(.social-links) > li::before {
+  border-radius: 50%;
+}
+
+body:has(.rect-mark:active) main ul:not(.social-links) > li::before {
+  background: #f43841;
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #ffffff;
+  text-decoration-color: var(--accent);
+}
+
+body:has(.rect-mark:active) a,
+body:has(.rect-mark:active) a:visited,
+body:has(.rect-mark:active) a:hover,
+body:has(.rect-mark:active) a:active {
+  text-decoration-color: #f43841;
+}
+
+@keyframes rectangle-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.14),
+      0 0 18px rgba(74, 222, 128, 0.16);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.18),
+      0 0 34px rgba(74, 222, 128, 0.32);
+  }
+}
+
+@media (min-width: 920px) {
+  .site-header {
+    display: block;
+  }
+
+  .site-header .rect-mark {
+    position: absolute;
+    left: -4.65rem;
+    top: 0.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .rect-mark {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rect-mark {
+    animation: none;
+  }
+
+  .rect-mark,
+  .rect-mark::before,
+  .rect-mark::after,
+  main ul:not(.social-links) > li::before {
+    transition: none;
+  }
+}
