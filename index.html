@@ -100,6 +100,27 @@
         margin: 0;
       }
 
+      .section-heading {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        font-size: 1rem;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
+      }
+
+      .section-heading hr {
+        flex: 1;
+        border: 0;
+        height: 1px;
+        background: #2b2b2b;
+      }
+
       @media (max-width: 600px) {
         .social-links {
           flex-direction: column;
@@ -160,10 +181,11 @@
         </div>
       </header>
 
-      <hr />
-
       <section>
-        <h2>Skills</h2>
+        <div class="section-heading">
+          <h2>Skills</h2>
+          <hr />
+        </div>
         <p>
           Python, SQL, Apache Spark, AWS, Docker, Kafka, MongoDB, NoSQL
           databases, Apache Airflow, dbt, Power BI, Tableau, vector databases,
@@ -171,10 +193,11 @@
         </p>
       </section>
 
-      <hr />
-
       <section>
-        <h2>Social</h2>
+        <div class="section-heading">
+          <h2>Social</h2>
+          <hr />
+        </div>
         <ul class="social-links">
           <li><a href="https://github.com/kamatealip/">GitHub</a></li>
           <li>
@@ -184,10 +207,11 @@
         </ul>
       </section>
 
-      <hr />
-
       <section>
-        <h2>Work Experience</h2>
+        <div class="section-heading">
+          <h2>Work Experience</h2>
+          <hr />
+        </div>
         <p>
           I am building hands-on experience through a six-month internship and
           project-led work focused on data engineering, search, recommendations,
@@ -208,10 +232,11 @@
         </ul>
       </section>
 
-      <hr />
-
       <section>
-        <h2>Projects</h2>
+        <div class="section-heading">
+          <h2>Projects</h2>
+          <hr />
+        </div>
         <ul>
           <li>
             <a href="./projects/local-document-search/"
@@ -241,10 +266,11 @@
         </ul>
       </section>
 
-      <hr />
-
       <section>
-        <h2>Education</h2>
+        <div class="section-heading">
+          <h2>Education</h2>
+          <hr />
+        </div>
         <ul>
           <li>
             <strong>Bachelor of Computer Applications</strong>, Shivaji
@@ -257,10 +283,11 @@
         </ul>
       </section>
 
-      <hr />
-
       <section>
-        <h2>Hobbies</h2>
+        <div class="section-heading">
+          <h2>Hobbies</h2>
+          <hr />
+        </div>
         <p>I enjoy driving bike/car, learning new things, and playing games.</p>
       </section>
     </main>
