@@ -1,215 +1,138 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume | Alip Kamate</title>
-    <meta
-      name="description"
-      content="Resume for Alip Kamate, junior data engineer focused on Python, SQL, ETL, warehouse models, and analytics-ready datasets."
-    />
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alip Kamate | Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #050505;
+        --panel: #101010;
+        --text: #f5f5f5;
+        --muted: #b8b8b8;
+        --accent: #4ade80;
+        --border: #2a2a2a;
+      }
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon_io/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
-    <link rel="stylesheet" href="./assets/cosmic.css" />
-    <script src="./assets/cosmic.js" defer></script>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 2rem 1.25rem 3rem;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+      header, section {
+        max-width: 860px;
+        margin: 0 auto 1.25rem;
+        padding: 1.2rem 1.3rem;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+      }
+      h1, h2 {
+        font-family: 'Geist Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-top: 0;
+      }
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.05rem; }
+      p, li { color: var(--muted); }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      hr {
+        border: 0;
+        border-top: 1px solid var(--border);
+        margin: 1.25rem auto 1.25rem;
+        max-width: 860px;
+      }
+      ul { padding-left: 1.2rem; }
+      strong { color: #ffffff; }
+    </style>
   </head>
-  <body class="cosmic-page resume-page theme-resume">
-    <div class="space-noise" aria-hidden="true"></div>
-    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
+  <body>
+    <header>
+      <h1>Alip Kamate</h1>
+      <p><strong>Data Engineer &amp; Web Developer</strong></p>
+      <p>Jath, Sangli, Maharashtra</p>
+      <p>
+        <a href="mailto:kamatealip1@gmail.com">kamatealip1@gmail.com</a> |
+        <a href="tel:+917387705851">+91 7387705851</a>
+      </p>
+    </header>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a class="brand-link" href="./index.html#home" aria-label="Back to home">
-        <span class="brand-glyph" aria-hidden="true"><span></span><span></span></span>
-        <span class="brand-copy">
-          <strong>Alip</strong>
-          <span>resume</span>
-        </span>
-      </a>
+    <hr />
 
-      <div class="nav-links">
-        <a href="./index.html#about">About</a>
-        <a href="./index.html#skills">Skills</a>
-        <a href="./index.html#projects">Projects</a>
-        <a href="./index.html#contact">Contact</a>
-        <a
-          class="nav-cta"
-          href="./assets/kamatealip_2026_6.pdf"
-          download="kamatealip_2026_6.pdf"
-        >
-          Download
-        </a>
-      </div>
+    <section>
+      <h2>Summary</h2>
+      <p>
+        I build dependable data pipelines, search systems, and web products that
+        turn messy information into useful tools for real people.
+      </p>
+    </section>
 
-      <button
-        class="icon-button mobile-toggle"
-        type="button"
-        data-menu-toggle
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-      >
-        <i class="ph ph-list"></i>
-      </button>
-    </nav>
+    <hr />
 
-    <main class="page-shell">
-      <section class="page-hero">
-        <div class="page-hero-grid">
-          <div class="reveal">
-            <p class="eyebrow">Resume</p>
-            <h1 class="page-title">Data Engineer</h1>
-            <p class="page-lead">
-              Python, SQL, ETL and warehouse modeling for clean, auditable, and
-              analytics-ready datasets.
-            </p>
-            <div class="inline-actions">
-              <a
-                class="button button-primary"
-                href="./assets/kamatealip_2026_6.pdf"
-                download="kamatealip_2026_6.pdf"
-              >
-                <i class="ph ph-file-arrow-down"></i>
-                Download PDF
-              </a>
-              <a class="button button-ghost" href="./index.html">
-                <i class="ph ph-arrow-left"></i>
-                Portfolio
-              </a>
-            </div>
-          </div>
+    <section>
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <strong>Local Document Search Assistant</strong> — Project-led
+          experience (2024 – Present)
+        </li>
+        <li>
+          <strong>Book Recommendation Engine</strong> — Product-focused builds
+          (2023 – 2024)
+        </li>
+        <li>
+          <strong>Retail Sales Intelligence Platform</strong> — Analytics
+          problem solving (2024 – Present)
+        </li>
+      </ul>
+    </section>
 
-          <aside class="glass-panel summary-card reveal delay-1">
-            <div class="resume-mascot" aria-hidden="true">
-              <span class="mascot-orbit mascot-orbit-one"></span>
-              <span class="mascot-orbit mascot-orbit-two"></span>
-              <span class="mascot-head">
-                <span class="mascot-eye mascot-eye-left"></span>
-                <span class="mascot-eye mascot-eye-right"></span>
-                <span class="mascot-smile"></span>
-              </span>
-              <span class="mascot-body"></span>
-              <span class="mascot-spark mascot-spark-one"></span>
-              <span class="mascot-spark mascot-spark-two"></span>
-            </div>
-            <p class="card-kicker">Alip Kamate</p>
-            <h2>Junior data engineer</h2>
-            <p>Jath, Sangli, Maharashtra</p>
-          </aside>
-        </div>
-      </section>
+    <hr />
 
-      <section class="case-section">
-        <div class="resume-grid">
-          <aside class="reveal delay-1">
-            <section class="resume-panel">
-              <h2>Contact</h2>
-              <ul class="resume-list">
-                <li><a href="mailto:kamatealip1@gmail.com">kamatealip1@gmail.com</a></li>
-                <li><a href="tel:+917387705851">+91 7387705851</a></li>
-                <li>Jath, Sangli, Maharashtra</li>
-                <li>
-                  <a href="https://github.com/kamatealip/" target="_blank" rel="noreferrer">
-                    github.com/kamatealip
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/kamatealip/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    linkedin.com/in/kamatealip
-                  </a>
-                </li>
-              </ul>
-            </section>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>Local Document Search Assistant</li>
+        <li>Book Recommendation Engine</li>
+        <li>Retail Sales Intelligence Platform</li>
+      </ul>
+    </section>
 
-            <section class="resume-panel">
-              <h2>Skills</h2>
-              <div class="tag-grid">
-                <span class="tag">Python</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">dbt</span>
-                <span class="tag">Airflow</span>
-                <span class="tag">Docker</span>
-                <span class="tag">Git</span>
-              </div>
-            </section>
-          </aside>
+    <hr />
 
-          <div class="reveal delay-2">
-            <section class="resume-panel">
-              <h2>Profile</h2>
-              <p>
-                BCA graduate focused on junior data engineering work: Python
-                ingestion scripts, SQL transformations, validation checks, and
-                clear documentation. Open to entry-level data roles.
-              </p>
-            </section>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>
+          Bachelor of Computer Applications — Shivaji University, Kolhapur
+          (7.58/10 CGPA)
+        </li>
+        <li>HSC Science — Raje Ramrao College, Jath (8.51/10 GPA)</li>
+      </ul>
+    </section>
 
-            <section class="resume-panel">
-              <h2>Project Experience</h2>
-              <article class="resume-entry">
-                <span>Data engineering</span>
-                <h3>Retail Sales Data Pipeline</h3>
-                <p>
-                  Built a batch ingestion flow, staged raw sales files into
-                  PostgreSQL, modeled reporting marts, and added validation
-                  checks for nulls, duplicates, and schema drift.
-                </p>
-              </article>
-              <article class="resume-entry">
-                <span>Analytics engineering</span>
-                <h3>Customer 360 Analytics Mart</h3>
-                <p>
-                  Designed fact and dimension tables for customer activity,
-                  cohorts, retention, and consistent dashboard metrics.
-                </p>
-              </article>
-            </section>
+    <hr />
 
-            <section class="resume-panel">
-              <h2>Education</h2>
-              <article class="resume-entry">
-                <span>Completed - 72%</span>
-                <h3>Bachelor of Computer Applications</h3>
-                <p>Shivaji University, Kolhapur</p>
-              </article>
-              <article class="resume-entry">
-                <span>2020</span>
-                <h3>HSC Science</h3>
-                <p>Raje Ramrao College - secured 80.84%</p>
-              </article>
-            </section>
-          </div>
-        </div>
-      </section>
-    </main>
+    <section>
+      <h2>Skills</h2>
+      <p>
+        Python, SQL, Spark, AWS, Docker containers, Kafka, MongoDB, NoSQL,
+        orchestration tools, dbt, Power BI, Tableau, RAG pipelines, Graph DB,
+        Vector DB
+      </p>
+    </section>
   </body>
 </html>

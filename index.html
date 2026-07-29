@@ -1,451 +1,212 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alip Kamate | Data Engineer & Web Developer</title>
-    <meta
-      name="description"
-      content="Minimal portfolio for Alip Kamate, data engineer and web developer focused on Python, SQL, JavaScript, APIs, data pipelines, and clean interfaces."
-    />
-    <meta name="author" content="Alip Kamate" />
-    <meta
-      name="keywords"
-      content="Alip Kamate, data engineer, web developer, python, sql, javascript, fastapi, sveltekit, html, css"
-    />
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alip Kamate | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #000000;
+        --text: #f3f3f3;
+        --muted: #cfcfcf;
+        --accent: #4ade80;
+      }
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon_io/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
-    <link rel="stylesheet" href="./assets/cosmic.css" />
-    <script src="./assets/cosmic.js" defer></script>
+      body {
+        margin: 0;
+        padding: 2rem 1.25rem 3rem;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      h1,
+      h2 {
+        font-family: "IBM Plex Mono", monospace;
+        text-transform: none;
+        letter-spacing: 0.04em;
+        margin-top: 0;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        margin: 0.4rem 0;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: #ffffff;
+        text-underline-offset: 0.2em;
+        padding-bottom: 0.08em;
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px solid #2b2b2b;
+        margin: 1.25rem 0;
+      }
+
+      ul {
+        padding-left: 1.1rem;
+      }
+
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .social-links li {
+        margin: 0;
+      }
+
+      @media (max-width: 600px) {
+        .social-links {
+          flex-direction: column;
+          gap: 0.4rem;
+        }
+      }
+    </style>
   </head>
-  <body class="cosmic-page home-page theme-home">
-    <div class="space-noise" aria-hidden="true"></div>
-    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
+  <body>
+    <main>
+      <header style="margin-bottom: 1rem">
+        <h1 style="margin-bottom: 0.4rem">Alip Kamate</h1>
+        <p style="margin: 0.1rem 0 0.6rem"><strong>Data Engineer</strong></p>
+        <p style="margin: 0.1rem 0">Jath, Sangli, Maharashtra</p>
+        <p style="margin: 0.1rem 0">
+          Email:
+          <a href="mailto:kamatealip1@gmail.com">kamatealip1@gmail.com</a>
+        </p>
+        <p style="margin: 0.1rem 0 0.8rem">
+          Phone: <a href="tel:+917387705851">+91 7387705851</a>
+        </p>
+        <p style="margin: 0.2rem 0 0">
+          I build practical data solutions that turn raw information into clear,
+          reliable, and useful outcomes.
+        </p>
+      </header>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a class="brand-link" href="#home" aria-label="Alip Kamate home">
-        <span class="brand-glyph" aria-hidden="true"><span></span><span></span></span>
-        <span class="brand-copy">
-          <strong>Alip</strong>
-          <span>data + web</span>
-        </span>
-      </a>
+      <hr />
 
-      <div class="nav-links">
-        <a class="is-active" href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-cta" href="./resume.html">Resume</a>
-      </div>
-
-      <button
-        class="icon-button mobile-toggle"
-        type="button"
-        data-menu-toggle
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-      >
-        <i class="ph ph-list"></i>
-      </button>
-    </nav>
-
-    <main class="page-shell">
-      <section class="hero-section section-home" id="home">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Data engineer / web developer</p>
-          <h1 class="hero-title">Alip Kamate</h1>
-          <p class="lead">
-            I build reliable data pipelines and clean web interfaces for
-            practical, easy-to-use products.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects">
-              <i class="ph ph-squares-four"></i>
-              View projects
-            </a>
-            <a
-              class="button button-ghost"
-              href="./assets/kamatealip_2026_6.pdf"
-              download="kamatealip_2026_6.pdf"
-            >
-              <i class="ph ph-file-arrow-down"></i>
-              Resume PDF
-            </a>
-          </div>
-          <div class="hero-meta" aria-label="Core skills">
-            <span class="meta-pill">Python</span>
-            <span class="meta-pill">SQL</span>
-            <span class="meta-pill">JavaScript</span>
-            <span class="meta-pill">FastAPI</span>
-            <span class="meta-pill">SvelteKit</span>
-            <span class="meta-pill">HTML / CSS</span>
-          </div>
-        </div>
-
-        <div class="hero-visual hero-card reveal delay-1">
-          <div class="capability-board" aria-label="Core capability areas">
-            <article class="capability-panel">
-              <i class="ph ph-database"></i>
-              <p class="card-kicker">Data engineering</p>
-              <h2>Pipelines, models, validation.</h2>
-              <ul>
-                <li>Python ingestion</li>
-                <li>SQL transformations</li>
-                <li>Warehouse-ready datasets</li>
-              </ul>
-            </article>
-            <article class="capability-panel">
-              <i class="ph ph-browser"></i>
-              <p class="card-kicker">Web development</p>
-              <h2>Interfaces, APIs, products.</h2>
-              <ul>
-                <li>Responsive HTML / CSS</li>
-                <li>JavaScript and SvelteKit</li>
-                <li>FastAPI backends</li>
-              </ul>
-            </article>
-          </div>
-          <div class="capability-strip" aria-label="Tools">
-            <span>Python</span>
-            <span>SQL</span>
-            <span>JavaScript</span>
-            <span>FastAPI</span>
-          </div>
-        </div>
+      <section>
+        <h2>Skills</h2>
+        <p>
+          Python, SQL, Spark, AWS, Docker containers, Kafka, MongoDB, NoSQL,
+          orchestration tools, dbt, Power BI, Tableau, RAG pipelines, Graph DB,
+          Vector DB
+        </p>
       </section>
 
-      <div class="section-edge" aria-hidden="true"></div>
+      <hr />
 
-      <section class="content-section section-about" id="about">
-        <header class="section-head reveal">
-          <div>
-            <p class="section-kicker">About</p>
-            <h2 class="section-title">Clear data systems.</h2>
-          </div>
-          <p class="section-copy">
-            BCA graduate focused on practical data engineering and web
-            development: pipelines, APIs, clean interfaces, and analytics-ready
-            tables.
-          </p>
-        </header>
-
-        <div class="about-layout">
-          <article class="glass-panel portrait-panel home-art-panel reveal delay-1">
-            <h2>Alip Kamate</h2>
-            <p>Data engineer and web developer building useful project systems.</p>
-          </article>
-
-          <article class="glass-panel about-card reveal delay-2">
-            <p class="card-kicker">Best fit</p>
-            <h3>Data engineering plus web development for complete products.</h3>
-            <p>
-              I enjoy turning messy source data into clean datasets, APIs, and
-              user interfaces that are simple to understand and easy to use.
-            </p>
-            <div class="proof-strip" aria-label="Profile highlights">
-              <div class="proof-item">
-                <strong>80.84%</strong>
-                <span>HSC science</span>
-              </div>
-              <div class="proof-item">
-                <strong>72%</strong>
-                <span>BCA completed</span>
-              </div>
-              <div class="proof-item">
-                <strong>2</strong>
-                <span>Linked case studies</span>
-              </div>
-            </div>
-            <ul class="focus-list">
-              <li>Data cleaning, validation, and warehouse-ready models</li>
-              <li>Responsive web interfaces and API-backed products</li>
-              <li>Entry-level data engineer, web developer, and analytics roles</li>
-            </ul>
-          </article>
-        </div>
+      <section>
+        <h2>Social</h2>
+        <ul class="social-links">
+          <li><a href="https://github.com/kamatealip/">GitHub</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/kamatealip/">LinkedIn</a>
+          </li>
+          <li><a href="https://kamatealip.github.io">Portfolio</a></li>
+        </ul>
       </section>
 
-      <section class="content-section section-skills" id="skills">
-        <header class="section-head reveal">
-          <div>
-            <p class="section-kicker">Skills</p>
-            <h2 class="section-title">Balanced toolkit.</h2>
-          </div>
-          <p class="section-copy">
-            A compact stack for data pipelines, APIs, responsive interfaces,
-            and reproducible project work.
-          </p>
-        </header>
+      <hr />
 
-        <div class="skills-layout">
-          <div class="skill-cloud reveal delay-1">
-            <article class="skill-tile">
-              <i class="ph ph-code"></i>
-              <h3>Python</h3>
-              <p>Ingestion scripts and automation.</p>
-            </article>
-            <article class="skill-tile">
-              <i class="ph ph-database"></i>
-              <h3>SQL</h3>
-              <p>Transformations and marts.</p>
-            </article>
-            <article class="skill-tile">
-              <i class="ph ph-flow-arrow"></i>
-              <h3>FastAPI</h3>
-              <p>API design for data products.</p>
-            </article>
-            <article class="skill-tile">
-              <i class="ph ph-brackets-curly"></i>
-              <h3>JavaScript</h3>
-              <p>Interactive web interfaces.</p>
-            </article>
-            <article class="skill-tile">
-              <i class="ph ph-layout"></i>
-              <h3>HTML / CSS</h3>
-              <p>Responsive, polished layouts.</p>
-            </article>
-            <article class="skill-tile">
-              <i class="ph ph-browser"></i>
-              <h3>SvelteKit</h3>
-              <p>Product-style web apps.</p>
-            </article>
-          </div>
-
-          <aside class="glass-panel skill-note reveal delay-2">
-            <p class="card-kicker">Also comfortable with</p>
-            <h3>Tools that keep projects clean and repeatable.</h3>
-            <div class="tag-grid">
-              <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">dbt</span>
-              <span class="tag">SvelteKit</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">HTML / CSS</span>
-              <span class="tag">Docker</span>
-              <span class="tag">Git</span>
-              <span class="tag">Linux</span>
-              <span class="tag">Airflow</span>
-            </div>
-          </aside>
-        </div>
+      <section>
+        <h2>Work Experience</h2>
+        <p>
+          I don't have formal professional work experience yet, but I am gaining
+          practical experience by building projects that solve real-world
+          problems. I also completed a 6-month internship where I learned how to
+          turn ideas into working solutions with discipline, teamwork, and
+          consistent execution.
+        </p>
+        <ul>
+          <li>
+            <strong>Internship</strong> — 6 months<br />Worked on practical
+            development tasks, learned real-world problem solving, and improved
+            my ability to build useful solutions.
+          </li>
+          <li>
+            <strong>Project-based learning</strong> — 2024 – Present<br />Built
+            applications and data solutions that focus on real needs such as
+            search, recommendation, and smart automation.
+          </li>
+        </ul>
       </section>
 
-      <section class="content-section section-projects" id="projects">
-        <header class="section-head reveal">
-          <div>
-            <p class="section-kicker">Projects</p>
-            <h2 class="section-title">Built from raw data.</h2>
-          </div>
-          <p class="section-copy">
-            Compact case studies showing ingestion, cleaning, storage,
-            retrieval, and practical interfaces.
-          </p>
-        </header>
+      <hr />
 
-        <div class="projects-layout">
-          <article class="project-card featured reveal delay-1">
-            <p class="card-kicker">Data product</p>
-            <h3>Book Metadata Pipeline</h3>
-            <p>
-              Scraped, cleaned, and prepared book catalog data for search,
-              recommendations, and reporting.
-            </p>
-            <div class="tag-grid">
-              <span class="tag">Scrapy</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Scikit-Learn</span>
-            </div>
-            <a class="button button-ghost" href="./projects/book-recommendation/index.html">
-              Case study
-              <i class="ph ph-arrow-right"></i>
-            </a>
-          </article>
-
-          <article class="project-card featured reveal delay-2">
-            <p class="card-kicker">Search system</p>
-            <h3>Local Document Indexing</h3>
-            <p>
-              A local ingestion and retrieval pipeline for documents, metadata,
-              SQLite storage, and ranked snippets.
-            </p>
-            <div class="tag-grid">
-              <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">SQLite</span>
-            </div>
-            <a class="button button-ghost" href="./projects/local-document-search/index.html">
-              Case study
-              <i class="ph ph-arrow-right"></i>
-            </a>
-          </article>
-
-          <article class="project-card reveal delay-1">
-            <p class="card-kicker">Pipeline design</p>
-            <h3>Retail Sales ETL</h3>
-            <p>Batch ingestion, staging, validation checks, and BI-ready marts.</p>
-            <div class="tag-grid">
-              <span class="tag">Airflow</span>
-              <span class="tag">dbt</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal delay-2">
-            <p class="card-kicker">Analytics</p>
-            <h3>Customer 360 Mart</h3>
-            <p>Fact and dimension modeling for retention and activity metrics.</p>
-            <div class="tag-grid">
-              <span class="tag">SQL</span>
-              <span class="tag">PostgreSQL</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal delay-3">
-            <p class="card-kicker">Streaming</p>
-            <h3>Kafka Metrics Plan</h3>
-            <p>Event ingestion design for near-real-time reporting workflows.</p>
-            <div class="tag-grid">
-              <span class="tag">Kafka</span>
-              <span class="tag">Spark</span>
-            </div>
-          </article>
-        </div>
+      <section>
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <a href="./projects/local-document-search/index.html"
+              ><strong>Local Document Search Assistant</strong></a
+            ><br />Built a local-first search tool that helps users find
+            documents, metadata, and snippets quickly without needing a cloud
+            service.
+          </li>
+          <li>
+            <a href="./projects/book-recommendation/index.html"
+              ><strong>Book Recommendation Engine</strong></a
+            ><br />Created a recommendation-oriented data product that turns raw
+            book metadata into a more meaningful discovery experience.
+          </li>
+          <li>
+            <strong>Traffic Controller System</strong><br />Designed a practical
+            solution concept for improving traffic flow, vehicle monitoring, and
+            smarter decision-making in busy areas.
+          </li>
+          <li>
+            <strong>Smart Inventory Management Tool</strong><br />Built a system
+            idea for tracking stock, reducing waste, and helping businesses make
+            faster operational decisions.
+          </li>
+        </ul>
       </section>
 
-      <section class="content-section section-experience" id="experience">
-        <header class="section-head reveal">
-          <div>
-            <p class="section-kicker">Experience</p>
-            <h2 class="section-title">Proof of practice.</h2>
-          </div>
-          <p class="section-copy">
-            Portfolio work shaped around production habits: readable code,
-            validation, clear schemas, and documented decisions.
-          </p>
-        </header>
+      <hr />
 
-        <div class="timeline-layout">
-          <aside class="timeline-index reveal delay-1" aria-label="Experience index">
-            <span>Ingest</span>
-            <span>Model</span>
-            <span>Validate</span>
-          </aside>
-          <div class="timeline">
-            <article class="glass-panel timeline-item reveal delay-1">
-              <p class="timeline-date">Portfolio project</p>
-              <h3>Retail Sales Data Pipeline</h3>
-              <p>
-                Raw sales files staged into PostgreSQL, transformed with SQL,
-                and checked for nulls, duplicates, and schema drift.
-              </p>
-            </article>
-            <article class="glass-panel timeline-item reveal delay-2">
-              <p class="timeline-date">Analytics engineering</p>
-              <h3>Customer 360 Analytics Mart</h3>
-              <p>
-                Fact and dimension tables for retention, cohorts, customer
-                activity, and consistent dashboard metrics.
-              </p>
-            </article>
-            <article class="glass-panel timeline-item reveal delay-3">
-              <p class="timeline-date">Current focus</p>
-              <h3>Data platform foundations</h3>
-              <p>
-                Airflow, Spark, Kafka, Docker, AWS, and better operational
-                patterns for reliable entry-level data work.
-              </p>
-            </article>
-          </div>
-        </div>
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>Bachelor of Computer Applications</strong>, Shivaji
+            University, Kolhapur — 7.58/10 CGPA
+          </li>
+          <li>
+            <strong>HSC Science</strong>, Raje Ramrao College, Jath — 8.51/10
+            GPA
+          </li>
+        </ul>
       </section>
 
-      <section class="content-section section-contact" id="contact">
-        <div class="contact-layout">
-          <article class="glass-panel contact-card reveal">
-            <p class="section-kicker">Contact</p>
-            <h2>Let us build something useful.</h2>
-            <p>
-              Open to junior data engineer, analytics engineer, and data
-              platform internship opportunities.
-            </p>
-            <div class="inline-actions">
-              <a class="button button-primary" href="mailto:kamatealip1@gmail.com">
-                <i class="ph ph-paper-plane-tilt"></i>
-                Email me
-              </a>
-              <a class="button button-ghost" href="./resume.html">
-                <i class="ph ph-identification-card"></i>
-                Resume page
-              </a>
-            </div>
-          </article>
+      <hr />
 
-          <div class="contact-grid reveal delay-1">
-            <a class="contact-link" href="mailto:kamatealip1@gmail.com">
-              <i class="ph ph-envelope-simple"></i>
-              <strong>Email</strong>
-              <span>kamatealip1@gmail.com</span>
-            </a>
-            <a class="contact-link" href="tel:+917387705851">
-              <i class="ph ph-phone"></i>
-              <strong>Phone</strong>
-              <span>+91 7387705851</span>
-            </a>
-            <a
-              class="contact-link"
-              href="https://github.com/kamatealip/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i class="ph ph-github-logo"></i>
-              <strong>GitHub</strong>
-              <span>github.com/kamatealip</span>
-            </a>
-            <a
-              class="contact-link"
-              href="https://www.linkedin.com/in/kamatealip/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i class="ph ph-linkedin-logo"></i>
-              <strong>LinkedIn</strong>
-              <span>linkedin.com/in/kamatealip</span>
-            </a>
-          </div>
-        </div>
+      <section>
+        <h2>Languages</h2>
+        <p>English, Marathi, Hindi</p>
       </section>
     </main>
-
-    <footer class="footer">
-      <p>Alip Kamate - Data Engineer & Web Developer Portfolio</p>
-    </footer>
   </body>
 </html>

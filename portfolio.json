@@ -1,0 +1,243 @@
+{
+  "name": "Alip Kamate",
+  "label": "Data Engineer & Web Developer",
+  "image_path": "img/default-image.png",
+  "contact": {
+    "email": "kamatealip1@gmail.com",
+    "phone": "+91 7387705851",
+    "location": "Jath, Sangli, Maharashtra"
+  },
+  "summary": "I build dependable data pipelines, search systems, and web products that turn messy information into useful tools for real people.",
+  "base_url": "https://kamatealip.github.io",
+  "social_links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/kamatealip/",
+      "svg_path": "img/github.svg"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/kamatealip/",
+      "svg_path": "img/linkedin.svg"
+    },
+    {
+      "label": "Portfolio",
+      "url": "https://kamatealip.github.io",
+      "svg_path": "img/globe.svg"
+    }
+  ],
+  "work_experience": [
+    {
+      "company": "Project-led experience",
+      "position": "Local Document Search Assistant",
+      "url": "./projects/local-document-search/index.html",
+      "start_date": "2024",
+      "end_date": "Present",
+      "summary": "Built a local-first search experience for documents and metadata so people can find important files quickly without relying on cloud tools.",
+      "highlights": [
+        "Solved slow document discovery with searchable indexing and retrieval",
+        "Combined Python, SQLite, and FastAPI to make the workflow practical",
+        "Focused on a simple interface that feels useful from day one"
+      ]
+    },
+    {
+      "company": "Product-focused builds",
+      "position": "Book Recommendation Engine",
+      "url": "./projects/book-recommendation/index.html",
+      "start_date": "2023",
+      "end_date": "2024",
+      "summary": "Created a recommendation-oriented data pipeline that turns raw catalog information into a cleaner and more useful experience for readers.",
+      "highlights": [
+        "Improved discoverability by organizing metadata around user needs",
+        "Used automation and cleaning workflows to make the data reliable",
+        "Turned a raw dataset into an approachable product experience"
+      ]
+    },
+    {
+      "company": "Analytics problem solving",
+      "position": "Retail Sales Intelligence Platform",
+      "url": "https://kamatealip.github.io",
+      "start_date": "2024",
+      "end_date": "Present",
+      "summary": "Designed an ETL-style workflow for sales reporting that helps spot gaps, validate data quality, and support business decision-making.",
+      "highlights": [
+        "Addressed reporting reliability by validating nulls, duplicates, and schema drift",
+        "Created a warehouse-ready model for BI-style use cases",
+        "Built a practical foundation for dashboarding and operational insight"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Local Document Search Assistant",
+      "summary": "Built a local-first search tool that helps users find documents, metadata, and snippets quickly without needing a cloud service.",
+      "url": "./projects/local-document-search/index.html",
+      "highlights": [
+        "Solved everyday file discovery with searchable indexing",
+        "Used Python, SQLite, and FastAPI for a practical retrieval workflow",
+        "Created a lightweight experience that feels useful for personal and team use"
+      ],
+      "images": []
+    },
+    {
+      "title": "Book Recommendation Engine",
+      "summary": "Created a recommendation-oriented data product that turns raw book metadata into a more meaningful discovery experience.",
+      "url": "./projects/book-recommendation/index.html",
+      "highlights": [
+        "Improved content discovery by cleaning and organizing catalog data",
+        "Applied Python and pandas to prepare a well-structured dataset",
+        "Focused on usefulness, clarity, and maintainability"
+      ],
+      "images": []
+    },
+    {
+      "title": "Retail Sales Intelligence Platform",
+      "summary": "Developed a data workflow for sales reporting that validates quality and supports decision-making with reliable analytics-ready data.",
+      "url": "https://kamatealip.github.io",
+      "highlights": [
+        "Solved reporting reliability with validation checks for nulls and duplicates",
+        "Built a warehouse-ready structure for downstream analysis",
+        "Made the data easier to trust for dashboards and business reporting"
+      ],
+      "images": []
+    },
+    {
+      "title": "Customer 360 Analytics Mart",
+      "summary": "Designed fact and dimension models that help teams understand customer activity, retention patterns, and reporting consistency.",
+      "url": "https://kamatealip.github.io",
+      "highlights": [
+        "Created a useful 360-degree view for customer analytics",
+        "Structured metrics that support retention and engagement decisions",
+        "Used SQL and PostgreSQL to keep the model practical and understandable"
+      ],
+      "images": []
+    },
+    {
+      "title": "Personal Finance Insight Dashboard",
+      "summary": "Designed a realistic dashboard concept for tracking spending habits, expenses, and savings patterns with a clean data interface.",
+      "url": "https://kamatealip.github.io",
+      "highlights": [
+        "Addressed a common personal finance problem with a simple analytics experience",
+        "Focused on clarity, data categorization, and actionable insights",
+        "Showcases how data engineering and web design can work together"
+      ],
+      "images": []
+    }
+  ],
+  "volunteer_experience": [],
+  "education": [
+    {
+      "institution": "Shivaji University, Kolhapur",
+      "location": "Kolhapur, Maharashtra",
+      "url": "https://www.unishivaji.ac.in/",
+      "degrees": ["Bachelor of Computer Applications"],
+      "honors": ["Completed with 72% (approx. 7.58/10 CGPA)"],
+      "gpa_cumulative": "7.58/10 CGPA",
+      "gpa_major": "7.58/10 CGPA",
+      "graduation_date": "Completed"
+    },
+    {
+      "institution": "Raje Ramrao College",
+      "location": "Jath, Maharashtra",
+      "url": "https://www.rjcjath.com/",
+      "degrees": ["HSC Science"],
+      "honors": ["Secured 80.84% (approx. 8.51/10 GPA)"],
+      "gpa_cumulative": "8.51/10 GPA",
+      "gpa_major": "8.51/10 GPA",
+      "graduation_date": "2020"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "proficiency": 90,
+      "proficiency_label": "Strong"
+    },
+    {
+      "name": "SQL",
+      "proficiency": 90,
+      "proficiency_label": "Strong"
+    },
+    {
+      "name": "Spark",
+      "proficiency": 80,
+      "proficiency_label": "Strong"
+    },
+    {
+      "name": "AWS",
+      "proficiency": 75,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "Docker Containers",
+      "proficiency": 75,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "Kafka",
+      "proficiency": 70,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "MongoDB",
+      "proficiency": 70,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "NoSQL",
+      "proficiency": 70,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "Orchestration Tools",
+      "proficiency": 70,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "dbt",
+      "proficiency": 70,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "Power BI",
+      "proficiency": 70,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "Tableau",
+      "proficiency": 70,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "RAG Pipelines",
+      "proficiency": 65,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "Graph DB",
+      "proficiency": 65,
+      "proficiency_label": "Growing"
+    },
+    {
+      "name": "Vector DB",
+      "proficiency": 65,
+      "proficiency_label": "Growing"
+    }
+  ],
+  "interests": [],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Professional working proficiency"
+    },
+    {
+      "language": "Marathi",
+      "fluency": "Native"
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Professional working proficiency"
+    }
+  ],
+  "references": []
+}
