@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Engineer Resume | Alip Kamate</title>
+    <title>Resume | Alip Kamate</title>
     <meta
       name="description"
-      content="Resume of Alip Kamate, focused on junior data engineering, Python, SQL, ETL pipelines, warehouse modeling, and analytics-ready datasets."
+      content="Resume for Alip Kamate, junior data engineer focused on Python, SQL, ETL, warehouse models, and analytics-ready datasets."
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <link
       rel="apple-touch-icon"
@@ -34,86 +35,105 @@
       href="./assets/favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
-    <link rel="stylesheet" href="./assets/site.css" />
-    <link rel="stylesheet" href="./assets/valorant-theme.css" />
+    <link rel="stylesheet" href="./assets/cosmic.css" />
+    <script src="./assets/cosmic.js" defer></script>
   </head>
-  <body class="page-resume">
-    <a class="cv-back" href="index.html" aria-label="Back to portfolio">
-      <i class="ph ph-arrow-left"></i>
-    </a>
+  <body class="cosmic-page resume-page theme-resume">
+    <div class="space-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
 
-    <main class="cv-page">
-      <section class="cv-sheet">
-        <header class="cv-banner">
-          <div class="cv-avatar-wrap">
-            <div class="cv-avatar-photo">
-              <img
-                class="cv-avatar-image"
-                src="./assets/gray_pfp.png"
-                alt="Portrait of Alip Kamate"
-              />
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand-link" href="./index.html#home" aria-label="Back to home">
+        <span class="brand-glyph" aria-hidden="true"><span></span><span></span></span>
+        <span class="brand-copy">
+          <strong>Alip</strong>
+          <span>resume</span>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#skills">Skills</a>
+        <a href="./index.html#projects">Projects</a>
+        <a href="./index.html#contact">Contact</a>
+        <a
+          class="nav-cta"
+          href="./assets/kamatealip_2026_6.pdf"
+          download="kamatealip_2026_6.pdf"
+        >
+          Download
+        </a>
+      </div>
+
+      <button
+        class="icon-button mobile-toggle"
+        type="button"
+        data-menu-toggle
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <i class="ph ph-list"></i>
+      </button>
+    </nav>
+
+    <main class="page-shell">
+      <section class="page-hero">
+        <div class="page-hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Resume</p>
+            <h1 class="page-title">Data Engineer</h1>
+            <p class="page-lead">
+              Python, SQL, ETL and warehouse modeling for clean, auditable, and
+              analytics-ready datasets.
+            </p>
+            <div class="inline-actions">
+              <a
+                class="button button-primary"
+                href="./assets/kamatealip_2026_6.pdf"
+                download="kamatealip_2026_6.pdf"
+              >
+                <i class="ph ph-file-arrow-down"></i>
+                Download PDF
+              </a>
+              <a class="button button-ghost" href="./index.html">
+                <i class="ph ph-arrow-left"></i>
+                Portfolio
+              </a>
             </div>
           </div>
 
-          <div class="cv-banner-copy">
-            <p class="cv-banner-kicker">Resume</p>
-            <h1>Alip Kamate</h1>
-            <p class="cv-banner-role">
-              Data Engineer • Python • SQL • ETL / ELT Pipelines
-            </p>
-          </div>
+          <aside class="glass-panel summary-card reveal delay-1">
+            <div class="resume-mascot" aria-hidden="true">
+              <span class="mascot-orbit mascot-orbit-one"></span>
+              <span class="mascot-orbit mascot-orbit-two"></span>
+              <span class="mascot-head">
+                <span class="mascot-eye mascot-eye-left"></span>
+                <span class="mascot-eye mascot-eye-right"></span>
+                <span class="mascot-smile"></span>
+              </span>
+              <span class="mascot-body"></span>
+              <span class="mascot-spark mascot-spark-one"></span>
+              <span class="mascot-spark mascot-spark-two"></span>
+            </div>
+            <p class="card-kicker">Alip Kamate</p>
+            <h2>Junior data engineer</h2>
+            <p>Jath, Sangli, Maharashtra</p>
+          </aside>
+        </div>
+      </section>
 
-          <a
-            href="./assets/kamatealip_2026_6.pdf"
-            download="kamatealip_2026_6.pdf"
-            class="cv-banner-link"
-          >
-            <i class="ph ph-file-arrow-down"></i>
-            Download PDF
-          </a>
-        </header>
-
-        <div class="cv-layout">
-          <aside class="cv-sidebar">
-            <section class="cv-side-section">
-              <h2 class="cv-side-title">Contact</h2>
-              <ul class="cv-contact-list">
+      <section class="case-section">
+        <div class="resume-grid">
+          <aside class="reveal delay-1">
+            <section class="resume-panel">
+              <h2>Contact</h2>
+              <ul class="resume-list">
+                <li><a href="mailto:kamatealip1@gmail.com">kamatealip1@gmail.com</a></li>
+                <li><a href="tel:+917387705851">+91 7387705851</a></li>
+                <li>Jath, Sangli, Maharashtra</li>
                 <li>
-                  <a href="mailto:kamatealip1@gmail.com">
-                    <i class="ph ph-envelope-simple"></i>
-                    <span>kamatealip1@gmail.com</span>
-                  </a>
-                </li>
-                <li>
-                  <span>
-                    <i class="ph ph-phone"></i>
-                    <span>+91 7387705851</span>
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <i class="ph ph-map-pin"></i>
-                    <span>Jath, Sangli, Maharashtra</span>
-                  </span>
-                </li>
-                <li>
-                  <a
-                    href="https://kamatealip.github.io/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i class="ph ph-globe"></i>
-                    <span>kamatealip.github.io</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/kamatealip/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i class="ph ph-github-logo"></i>
-                    <span>github.com/kamatealip</span>
+                  <a href="https://github.com/kamatealip/" target="_blank" rel="noreferrer">
+                    github.com/kamatealip
                   </a>
                 </li>
                 <li>
@@ -122,146 +142,70 @@
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <i class="ph ph-linkedin-logo"></i>
-                    <span>linkedin.com/in/kamatealip</span>
+                    linkedin.com/in/kamatealip
                   </a>
                 </li>
               </ul>
             </section>
 
-            <section class="cv-side-section">
-              <h2 class="cv-side-title">Skills</h2>
-              <ul class="cv-bullet-list">
-                <li>Python</li>
-                <li>SQL</li>
-                <li>Pandas & NumPy</li>
-                <li>PostgreSQL</li>
-                <li>dbt</li>
-                <li>Airflow</li>
-                <li>Docker</li>
-                <li>Git & GitHub</li>
-              </ul>
-            </section>
-
-            <section class="cv-side-section">
-              <h2 class="cv-side-title">Focus Areas</h2>
-              <ul class="cv-bullet-list">
-                <li>ETL and ELT pipelines</li>
-                <li>Warehouse and data mart modeling</li>
-                <li>Data cleaning and validation</li>
-                <li>Pipeline scheduling and logging</li>
-                <li>BI-ready reporting datasets</li>
-              </ul>
+            <section class="resume-panel">
+              <h2>Skills</h2>
+              <div class="tag-grid">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">dbt</span>
+                <span class="tag">Airflow</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Git</span>
+              </div>
             </section>
           </aside>
 
-          <div class="cv-main">
-            <section class="cv-section">
-              <div class="cv-section-head">
-                <span class="cv-section-icon">
-                  <i class="ph ph-user-circle"></i>
-                </span>
-                <h2>Profile</h2>
-              </div>
-              <p class="cv-summary">
-                BCA student focused on junior data engineering work: Python
-                ingestion scripts, SQL transformations, data validation,
-                warehouse-ready models, and clear documentation. Open to
-                entry-level and 1-2 year data engineer or analytics engineer
-                roles where I can keep building reliable data systems.
+          <div class="reveal delay-2">
+            <section class="resume-panel">
+              <h2>Profile</h2>
+              <p>
+                BCA graduate focused on junior data engineering work: Python
+                ingestion scripts, SQL transformations, validation checks, and
+                clear documentation. Open to entry-level data roles.
               </p>
             </section>
 
-            <section class="cv-section">
-              <div class="cv-section-head">
-                <span class="cv-section-icon">
-                  <i class="ph ph-briefcase"></i>
-                </span>
-                <h2>Project Experience</h2>
-              </div>
-
-              <div class="cv-timeline">
-                <article class="cv-entry">
-                  <div class="cv-entry-head">
-                    <div>
-                      <h3>Retail Sales Data Pipeline</h3>
-                      <p class="cv-entry-subtitle">
-                        Portfolio project • Data engineering
-                      </p>
-                    </div>
-                    <span class="cv-entry-tag">ETL</span>
-                  </div>
-                  <ul class="cv-entry-list">
-                    <li>
-                      Built a batch ingestion flow for raw sales files and
-                      staged them into PostgreSQL.
-                    </li>
-                    <li>
-                      Modeled daily revenue, product, and customer marts with
-                      SQL transformations.
-                    </li>
-                    <li>
-                      Added validation checks for nulls, duplicates, schema
-                      drift, and row-count anomalies.
-                    </li>
-                  </ul>
-                </article>
-
-                <article class="cv-entry">
-                  <div class="cv-entry-head">
-                    <div>
-                      <h3>Customer 360 Analytics Mart</h3>
-                      <p class="cv-entry-subtitle">
-                        Portfolio project • Analytics engineering
-                      </p>
-                    </div>
-                    <span class="cv-entry-tag">Warehouse</span>
-                  </div>
-                  <ul class="cv-entry-list">
-                    <li>
-                      Designed fact and dimension tables from customer, order,
-                      product, and support data.
-                    </li>
-                    <li>
-                      Wrote tested SQL models for retention, cohort, and
-                      customer activity reporting.
-                    </li>
-                    <li>
-                      Documented metric definitions so reporting stays
-                      consistent across dashboards.
-                    </li>
-                  </ul>
-                </article>
-              </div>
+            <section class="resume-panel">
+              <h2>Project Experience</h2>
+              <article class="resume-entry">
+                <span>Data engineering</span>
+                <h3>Retail Sales Data Pipeline</h3>
+                <p>
+                  Built a batch ingestion flow, staged raw sales files into
+                  PostgreSQL, modeled reporting marts, and added validation
+                  checks for nulls, duplicates, and schema drift.
+                </p>
+              </article>
+              <article class="resume-entry">
+                <span>Analytics engineering</span>
+                <h3>Customer 360 Analytics Mart</h3>
+                <p>
+                  Designed fact and dimension tables for customer activity,
+                  cohorts, retention, and consistent dashboard metrics.
+                </p>
+              </article>
             </section>
 
-            <section class="cv-section">
-              <div class="cv-section-head">
-                <span class="cv-section-icon">
-                  <i class="ph ph-graduation-cap"></i>
-                </span>
-                <h2>Education</h2>
-              </div>
-
-              <div class="cv-education-list">
-                <article class="cv-education-item">
-                  <div>
-                    <h3>Bachelor of Computer Applications (BCA)</h3>
-                    <p>Shivaji University, Kolhapur</p>
-                    <span>Currently pursuing</span>
-                  </div>
-                  <strong>2021 - Present</strong>
-                </article>
-
-                <article class="cv-education-item">
-                  <div>
-                    <h3>HSC (Science)</h3>
-                    <p>Raje Ramrao College</p>
-                    <span>Secured 80.84%</span>
-                  </div>
-                  <strong>2020</strong>
-                </article>
-              </div>
+            <section class="resume-panel">
+              <h2>Education</h2>
+              <article class="resume-entry">
+                <span>Completed - 72%</span>
+                <h3>Bachelor of Computer Applications</h3>
+                <p>Shivaji University, Kolhapur</p>
+              </article>
+              <article class="resume-entry">
+                <span>2020</span>
+                <h3>HSC Science</h3>
+                <p>Raje Ramrao College - secured 80.84%</p>
+              </article>
             </section>
           </div>
         </div>

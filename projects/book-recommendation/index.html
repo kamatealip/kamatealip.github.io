@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Metadata Pipeline | Alip Kamate</title>
+    <meta
+      name="description"
+      content="Case study for a book metadata pipeline by Alip Kamate: scraping, cleaning, feature tables, and recommendation-ready data."
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- Phosphor Icons (Thin/Light) -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <link
       rel="apple-touch-icon"
@@ -31,339 +35,163 @@
       href="../../assets/favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="../../assets/favicon_io/site.webmanifest" />
-    <link rel="stylesheet" href="../../assets/site.css" />
-    <link rel="stylesheet" href="../../assets/valorant-theme.css" />
+    <link rel="stylesheet" href="../../assets/cosmic.css" />
+    <script src="../../assets/cosmic.js" defer></script>
   </head>
-  <body class="page-book-project">
-    <canvas id="network-canvas"></canvas>
+  <body class="cosmic-page case-page theme-book">
+    <div class="space-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
 
-    <div class="audio-control" id="audio-btn">
-      <i class="ph ph-light ph-music-note"></i>
-      <span>Lofi Mode</span>
-      <audio id="bg-music" loop crossorigin="anonymous">
-        <source src="../../assets/lofi.mp3" type="audio/mpeg" />
-      </audio>
-    </div>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand-link" href="../../index.html#home" aria-label="Back to home">
+        <span class="brand-glyph" aria-hidden="true"><span></span><span></span></span>
+        <span class="brand-copy">
+          <strong>Alip</strong>
+          <span>book pipeline</span>
+        </span>
+      </a>
 
-    <nav class="navbar">
-      <div class="logo">AK<span class="text-accent">.</span></div>
-
-      <ul class="nav-links" id="nav-links">
-        <li>
-          <a href="../../index.html#about" onclick="toggleMenu()"
-            ><span class="text-accent mono">01.</span> About</a
-          >
-        </li>
-        <li>
-          <a href="../../index.html#skills" onclick="toggleMenu()"
-            ><span class="text-accent mono">02.</span> Skills</a
-          >
-        </li>
-        <li>
-          <a href="../../index.html#projects" onclick="toggleMenu()"
-            ><span class="text-accent mono">03.</span> Projects</a
-          >
-        </li>
-        <li>
-          <a href="../../resume.html"
-            ><span class="text-accent mono">04.</span> Resume</a
-          >
-        </li>
-        <li>
-          <a
-            href="../../index.html#contact"
-            class="btn-primary nav-cta-compact"
-            onclick="toggleMenu()"
-            >Contact</a
-          >
-        </li>
-      </ul>
+      <div class="nav-links">
+        <a href="../../index.html#about">About</a>
+        <a href="../../index.html#skills">Skills</a>
+        <a href="../../index.html#projects">Projects</a>
+        <a href="../../resume.html">Resume</a>
+        <a class="nav-cta" href="../../index.html#contact">Contact</a>
+      </div>
 
       <button
-        class="hamburger"
-        id="hamburger"
+        class="icon-button mobile-toggle"
         type="button"
+        data-menu-toggle
         aria-label="Toggle navigation"
         aria-expanded="false"
       >
-        <i class="ph ph-light ph-list" id="menu-icon"></i>
+        <i class="ph ph-list"></i>
       </button>
     </nav>
 
-    <main class="section-padding">
-      <div class="container">
-        <header class="project-header fade-up">
-          <h2 class="section-title">
-            <span class="section-number">PRJ.</span>Book Metadata Pipeline
-          </h2>
-          <div class="project-meta">
-            <span class="badge badge--outline mono">Scraping, cleaning, and feature tables</span>
-            <span class="badge badge--outline mono">A data product built from raw catalog data</span>
+    <main class="page-shell">
+      <section class="page-hero case-hero">
+        <div class="page-hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Case study</p>
+            <h1 class="page-title">Book Metadata Pipeline</h1>
+            <p class="page-lead">
+              Scraped catalog data transformed into clean tables for browsing,
+              search, and recommendation features.
+            </p>
+            <div class="hero-meta">
+              <span class="meta-pill">Scrapy</span>
+              <span class="meta-pill">Pandas</span>
+              <span class="meta-pill">Feature tables</span>
+            </div>
           </div>
-        </header>
 
-        <section class="project-layout fade-up">
-          <article class="project-copy">
-            <section class="case-card">
-              <h3>Problem</h3>
+          <div class="case-visual reveal delay-1" aria-hidden="true">
+            <span class="rail rail-one"></span>
+            <span class="rail rail-two"></span>
+            <span class="rail rail-three"></span>
+            <span class="data-sphere sphere-one"></span>
+            <span class="data-sphere sphere-two"></span>
+            <span class="data-sphere sphere-three"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="case-grid">
+          <div class="case-main">
+            <article class="case-card reveal">
+              <p class="card-kicker">Problem</p>
+              <h2>Raw book catalogs are useful, but messy.</h2>
               <p>
-                Book catalogs contain useful metadata, but raw scraped data is
-                messy: missing descriptions, inconsistent authors, duplicate
-                titles, and uneven categories. I wanted a pipeline that turns
-                that raw catalog into clean tables for search, recommendations,
-                and reporting.
+                Titles, authors, descriptions, categories, and ratings often
+                arrive incomplete or inconsistent. The project turns that raw
+                catalog into dependable data for product features.
               </p>
-            </section>
+            </article>
 
-            <section class="case-card">
-              <h3>Why I built it</h3>
-              <p>
-                This project shows data engineering fundamentals through a
-                familiar data product. The useful work is not only the final
-                recommendations; it is the ingestion, cleaning, schema design,
-                feature preparation, and reproducible handoff to the app layer.
-              </p>
-            </section>
-
-            <section class="case-card">
-              <h3>How it works</h3>
-              <ul>
-                <li>Scrape titles, authors, descriptions, categories, and ratings.</li>
-                <li>Normalize text fields and remove unusable or duplicate records.</li>
-                <li>Create clean staging tables before feature generation.</li>
-                <li>Build feature tables for TF-IDF retrieval and catalog browsing.</li>
-                <li>Expose the prepared data through a lightweight product interface.</li>
-              </ul>
-            </section>
-
-            <section class="case-card">
-              <h3>Key decisions</h3>
-              <ul>
-                <li>Separated raw, cleaned, and feature-ready datasets.</li>
-                <li>Kept transformations readable so pipeline behavior is easy to audit.</li>
-                <li>Used TF-IDF as a simple downstream consumer of the prepared data.</li>
-                <li>Designed the project as a data pipeline first and a recommender second.</li>
-              </ul>
-            </section>
-
-            <section class="case-card">
-              <h3>What I learned</h3>
-              <p>
-                This project helped me understand that data products depend on
-                dependable upstream work. Clean schema choices, validation, and
-                reproducible transformations matter as much as the recommendation
-                logic sitting at the end of the pipeline.
-              </p>
-            </section>
-
-            <section class="case-card">
-              <h3>What I'd improve next</h3>
-              <ul>
-                <li>Add dbt-style tests for uniqueness, nulls, and accepted categories.</li>
-                <li>Schedule refreshes and track pipeline runtime in a simple log table.</li>
-                <li>Store catalog snapshots so changes can be compared over time.</li>
-                <li>Add data documentation for each cleaned table and feature field.</li>
-              </ul>
-            </section>
-          </article>
-
-          <aside class="project-sidebar">
-            <div class="sidebar-card">
-              <h3>Tech Stack</h3>
-              <div class="tech-stack">
-                <span class="badge badge--secondary tech-badge">Python</span>
-                <span class="badge badge--secondary tech-badge">Scrapy</span>
-                <span class="badge badge--secondary tech-badge">Pandas</span>
-                <span class="badge badge--secondary tech-badge">SQL-ready Tables</span>
-                <span class="badge badge--secondary tech-badge">Scikit-Learn</span>
-                <span class="badge badge--secondary tech-badge">SvelteKit</span>
-                <span class="badge badge--secondary tech-badge">Feature Engineering</span>
+            <article class="case-card reveal delay-1">
+              <p class="card-kicker">Pipeline</p>
+              <h2>From scrape to usable tables.</h2>
+              <div class="case-flow">
+                <div class="flow-step">
+                  <strong>01</strong>
+                  <span>Scrape catalog fields</span>
+                </div>
+                <div class="flow-step">
+                  <strong>02</strong>
+                  <span>Clean duplicates and missing values</span>
+                </div>
+                <div class="flow-step">
+                  <strong>03</strong>
+                  <span>Create staging and feature data</span>
+                </div>
+                <div class="flow-step">
+                  <strong>04</strong>
+                  <span>Serve recommendations and search</span>
+                </div>
               </div>
-            </div>
+            </article>
 
-            <div class="sidebar-card project-meta-card">
-              <h3>Project Snapshot</h3>
-              <ul class="sidebar-list">
-                <li><strong>Data source:</strong> scraped public book catalog</li>
-                <li><strong>Pipeline shape:</strong> raw, cleaned, and feature-ready tables</li>
-                <li><strong>Main goal:</strong> reliable metadata for search and recommendations</li>
-                <li><strong>User layer:</strong> SvelteKit browsing interface</li>
+            <article class="case-card reveal delay-2">
+              <p class="card-kicker">Decisions</p>
+              <h2>Designed as a data pipeline first.</h2>
+              <ul class="case-list">
+                <li>Separated raw, cleaned, and feature-ready datasets.</li>
+                <li>Kept transformations readable and easy to audit.</li>
+                <li>Used TF-IDF as a simple downstream consumer of clean data.</li>
+                <li>Prepared the dataset for both analytics and product use.</li>
               </ul>
-            </div>
+            </article>
 
-            <div class="sidebar-card">
-              <h3>Why it matters</h3>
+            <article class="case-card reveal delay-3">
+              <p class="card-kicker">Next</p>
+              <h2>Make it more operational.</h2>
               <p>
-                This project shows how I turn messy source data into a cleaner
-                dataset that can support product features, analytics, and model
-                experiments.
+                Add data tests, scheduled refreshes, catalog snapshots, and
+                table documentation so every run is easier to inspect.
               </p>
-            </div>
+            </article>
+          </div>
+
+          <aside class="case-sidebar reveal delay-2">
+            <section class="case-card">
+              <h3>Tech stack</h3>
+              <div class="tag-grid">
+                <span class="tag">Python</span>
+                <span class="tag">Scrapy</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">SvelteKit</span>
+              </div>
+            </section>
+
+            <section class="case-card">
+              <h3>Snapshot</h3>
+              <ul class="case-list">
+                <li>Source: public book catalog</li>
+                <li>Shape: raw, cleaned, feature-ready</li>
+                <li>Goal: reliable recommendation data</li>
+              </ul>
+            </section>
 
             <a
+              class="button button-primary"
               href="https://github.com/kamatealip/shelf-sage"
-              class="btn-primary"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="ph ph-light ph-github-logo"></i> View Repository
+              <i class="ph ph-github-logo"></i>
+              View repository
             </a>
-
-            <a href="../../index.html#projects" class="btn-primary">
-              <i class="ph ph-light ph-arrow-left"></i> Back to Portfolio
+            <a class="button button-ghost" href="../../index.html#projects">
+              <i class="ph ph-arrow-left"></i>
+              Back to projects
             </a>
           </aside>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
-
-    <script>
-      // --- 0. MOBILE NAV ---
-      const body = document.body;
-      const navLinks = document.getElementById("nav-links");
-      const hamburger = document.getElementById("hamburger");
-      const menuIcon = document.getElementById("menu-icon");
-      function toggleMenu(forceState) {
-        const shouldOpen =
-          typeof forceState === "boolean"
-            ? forceState
-            : !navLinks.classList.contains("active");
-
-        navLinks.classList.toggle("active", shouldOpen);
-        body.classList.toggle("menu-open", shouldOpen);
-
-        if (hamburger) {
-          hamburger.setAttribute("aria-expanded", String(shouldOpen));
-        }
-
-        if (menuIcon) {
-          menuIcon.className = shouldOpen
-            ? "ph ph-light ph-x"
-            : "ph ph-light ph-list";
-        }
-      }
-
-      hamburger.addEventListener("click", () => toggleMenu());
-
-      navLinks.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => toggleMenu(false));
-      });
-
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 900) toggleMenu(false);
-      });
-
-      // --- 1. AUDIO / LOFI MODE ---
-      const audioBtn = document.getElementById("audio-btn");
-      const audio = document.getElementById("bg-music");
-      let audioContext;
-      let analyser;
-      let dataArray;
-      let source;
-      let isPlaying = false;
-
-      function initAudioContext() {
-        if (!audioContext) {
-          audioContext = new (window.AudioContext || window.webkitAudioContext)();
-          analyser = audioContext.createAnalyser();
-          analyser.fftSize = 256;
-          const bufferLength = analyser.frequencyBinCount;
-          dataArray = new Uint8Array(bufferLength);
-
-          source = audioContext.createMediaElementSource(audio);
-          source.connect(analyser);
-          analyser.connect(audioContext.destination);
-        }
-      }
-
-      function updateUIPlaying() {
-        audioBtn.classList.add("playing");
-      }
-      function updateUIPaused() {
-        audioBtn.classList.remove("playing");
-      }
-
-      audioBtn.addEventListener("click", () => {
-        if (!audioContext) {
-          initAudioContext();
-        }
-        if (isPlaying) {
-          audio.pause();
-          updateUIPaused();
-        } else {
-          audio.play();
-          updateUIPlaying();
-          if (audioContext && audioContext.state === "suspended")
-            audioContext.resume();
-        }
-        isPlaying = !isPlaying;
-      });
-
-      // --- 2. SUBTLE MOVING TILE BORDERS ---
-      const canvas = document.getElementById("network-canvas");
-      const ctx = canvas.getContext("2d");
-      const tileSize = 48;
-      let offsetX = 0;
-      let offsetY = 0;
-
-      function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resizeCanvas();
-
-      function getAudioIntensity() {
-        if (!analyser || !isPlaying || !dataArray) return 0;
-        analyser.getByteFrequencyData(dataArray);
-        const avg = dataArray.reduce((a, b) => a + b, 0) / dataArray.length;
-        return avg / 255;
-      }
-
-      function animateTiles(timestamp) {
-        const intensity = getAudioIntensity();
-        const speed = 0.08 + intensity * 0.18;
-        offsetX = (offsetX + speed) % tileSize;
-        offsetY = (offsetY + speed * 0.45) % tileSize;
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const pulse = (Math.sin(timestamp * 0.0005) + 1) * 0.5;
-        const alpha = 0.04 + pulse * 0.02 + intensity * 0.02;
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = `rgba(52, 178, 123, ${alpha.toFixed(3)})`;
-
-        for (let x = -tileSize; x < canvas.width + tileSize; x += tileSize) {
-          const px = x + offsetX;
-          ctx.beginPath();
-          ctx.moveTo(px, 0);
-          ctx.lineTo(px, canvas.height);
-          ctx.stroke();
-        }
-        for (let y = -tileSize; y < canvas.height + tileSize; y += tileSize) {
-          const py = y + offsetY;
-          ctx.beginPath();
-          ctx.moveTo(0, py);
-          ctx.lineTo(canvas.width, py);
-          ctx.stroke();
-        }
-
-        requestAnimationFrame(animateTiles);
-      }
-
-      window.addEventListener("resize", resizeCanvas);
-      animateTiles(0);
-
-      // --- 3. FADE-IN ---
-      const fadeObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) entry.target.classList.add("visible");
-          });
-        },
-        { threshold: 0.1 },
-      );
-      document
-        .querySelectorAll(".fade-up")
-        .forEach((el) => fadeObserver.observe(el));
-    </script>
   </body>
 </html>

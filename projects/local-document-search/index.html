@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Local Document Indexing Pipeline | Alip Kamate</title>
+    <title>Local Document Indexing | Alip Kamate</title>
+    <meta
+      name="description"
+      content="Case study for a local document indexing pipeline by Alip Kamate: ingestion, metadata, SQLite storage, and ranked retrieval."
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <link
       rel="apple-touch-icon"
@@ -30,338 +35,163 @@
       href="../../assets/favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="../../assets/favicon_io/site.webmanifest" />
-    <link rel="stylesheet" href="../../assets/site.css" />
-    <link rel="stylesheet" href="../../assets/valorant-theme.css" />
+    <link rel="stylesheet" href="../../assets/cosmic.css" />
+    <script src="../../assets/cosmic.js" defer></script>
   </head>
-  <body class="page-search-project">
-    <canvas id="network-canvas"></canvas>
+  <body class="cosmic-page case-page theme-search">
+    <div class="space-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
 
-    <div class="audio-control" id="audio-btn">
-      <i class="ph ph-light ph-music-note"></i>
-      <span>Lofi Mode</span>
-      <audio id="bg-music" loop crossorigin="anonymous">
-        <source src="../../assets/lofi.mp3" type="audio/mpeg" />
-      </audio>
-    </div>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand-link" href="../../index.html#home" aria-label="Back to home">
+        <span class="brand-glyph" aria-hidden="true"><span></span><span></span></span>
+        <span class="brand-copy">
+          <strong>Alip</strong>
+          <span>document search</span>
+        </span>
+      </a>
 
-    <nav class="navbar">
-      <div class="logo">AK<span class="text-accent">.</span></div>
-
-      <ul class="nav-links" id="nav-links">
-        <li>
-          <a href="../../index.html#about" onclick="toggleMenu()"
-            ><span class="text-accent mono">01.</span> About</a
-          >
-        </li>
-        <li>
-          <a href="../../index.html#skills" onclick="toggleMenu()"
-            ><span class="text-accent mono">02.</span> Skills</a
-          >
-        </li>
-        <li>
-          <a href="../../index.html#projects" onclick="toggleMenu()"
-            ><span class="text-accent mono">03.</span> Projects</a
-          >
-        </li>
-        <li>
-          <a href="../../resume.html"
-            ><span class="text-accent mono">04.</span> Resume</a
-          >
-        </li>
-        <li>
-          <a
-            href="../../index.html#contact"
-            class="btn-primary nav-cta-compact"
-            onclick="toggleMenu()"
-            >Contact</a
-          >
-        </li>
-      </ul>
+      <div class="nav-links">
+        <a href="../../index.html#about">About</a>
+        <a href="../../index.html#skills">Skills</a>
+        <a href="../../index.html#projects">Projects</a>
+        <a href="../../resume.html">Resume</a>
+        <a class="nav-cta" href="../../index.html#contact">Contact</a>
+      </div>
 
       <button
-        class="hamburger"
-        id="hamburger"
+        class="icon-button mobile-toggle"
         type="button"
+        data-menu-toggle
         aria-label="Toggle navigation"
         aria-expanded="false"
       >
-        <i class="ph ph-light ph-list" id="menu-icon"></i>
+        <i class="ph ph-list"></i>
       </button>
     </nav>
 
-    <main class="section-padding">
-      <div class="container">
-        <header class="project-header fade-up">
-          <h2 class="section-title">
-            <span class="section-number">PRJ.</span>Local Document Indexing Pipeline
-          </h2>
-          <div class="project-meta">
-            <span class="badge badge--outline mono">Local ingestion, metadata, and ranked retrieval</span>
-            <span class="badge badge--outline mono">Built like a small private data platform</span>
+    <main class="page-shell">
+      <section class="page-hero case-hero">
+        <div class="page-hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Case study</p>
+            <h1 class="page-title">Local Document Indexing</h1>
+            <p class="page-lead">
+              A private, local-first pipeline that scans files, extracts text,
+              stores metadata, and returns ranked document snippets.
+            </p>
+            <div class="hero-meta">
+              <span class="meta-pill">Python</span>
+              <span class="meta-pill">FastAPI</span>
+              <span class="meta-pill">SQLite</span>
+            </div>
           </div>
-        </header>
 
-        <section class="project-layout fade-up">
-          <article class="project-copy">
-            <section class="case-card">
-              <h3>Problem</h3>
+          <div class="case-visual reveal delay-1" aria-hidden="true">
+            <span class="rail rail-one"></span>
+            <span class="rail rail-two"></span>
+            <span class="rail rail-three"></span>
+            <span class="data-sphere sphere-one"></span>
+            <span class="data-sphere sphere-two"></span>
+            <span class="data-sphere sphere-three"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="case-grid">
+          <div class="case-main">
+            <article class="case-card reveal">
+              <p class="card-kicker">Problem</p>
+              <h2>Local documents become hard to search and reuse.</h2>
               <p>
-                Documents spread across folders become hard to search, audit,
-                and reuse. I wanted a local indexing pipeline that scans files,
-                extracts text and metadata, stores structured entries, and makes
-                retrieval faster without sending private notes anywhere.
+                Notes, PDFs, and study files spread across folders are difficult
+                to audit. This project structures them into searchable local
+                records without sending private files elsewhere.
               </p>
-            </section>
+            </article>
 
-            <section class="case-card">
-              <h3>Why I built it</h3>
-              <p>
-                The main reason for building this project was to practice data
-                ingestion and indexing on unstructured files. It behaves like a
-                small private data platform: sources are scanned, transformed
-                into searchable records, and served through a simple API.
-              </p>
-              <p>
-                The offline workflow also keeps the project grounded in a real
-                use case: focused study, local privacy, and quick movement from
-                query to useful context.
-              </p>
-            </section>
-
-            <section class="case-card">
-              <h3>How it works</h3>
-              <ul>
-                <li>Scan configured folders and detect supported document files.</li>
-                <li>Extract readable text, file paths, timestamps, and source metadata.</li>
-                <li>Load structured records into SQLite for quick lookup.</li>
-                <li>Rank matching documents and return useful context snippets.</li>
-                <li>Keep ingestion, storage, and search local to the machine.</li>
-              </ul>
-            </section>
-
-            <section class="case-card">
-              <h3>Key decisions</h3>
-              <ul>
-                <li>Kept the system local-first for privacy and reproducibility.</li>
-                <li>Stored metadata separately from extracted content for cleaner querying.</li>
-                <li>Prioritized incremental indexing as the next production-style step.</li>
-                <li>Focused on making the result-to-reading flow immediate.</li>
-              </ul>
-            </section>
-
-            <section class="case-card">
-              <h3>What I learned</h3>
-              <p>
-                This project taught me how ingestion choices affect the final
-                search experience. File parsing, metadata consistency, storage
-                design, indexing, and API responses all shape whether a retrieval
-                workflow feels reliable.
-              </p>
-            </section>
-
-            <section class="case-card">
-              <h3>What I'd improve next</h3>
-              <ul>
-                <li>Add incremental re-indexing when files change.</li>
-                <li>Add data quality checks for failed parses and empty extracts.</li>
-                <li>Introduce filtering by folder, file type, source, and tags.</li>
-                <li>Track indexing history and failures in operational tables.</li>
-              </ul>
-            </section>
-          </article>
-
-          <aside class="project-sidebar">
-            <div class="sidebar-card">
-              <h3>Tech Stack</h3>
-              <div class="tech-stack">
-                <span class="badge badge--secondary tech-badge">Python</span>
-                <span class="badge badge--secondary tech-badge">FastAPI</span>
-                <span class="badge badge--secondary tech-badge">SQLite</span>
-                <span class="badge badge--secondary tech-badge">Search Indexing</span>
-                <span class="badge badge--secondary tech-badge">Text Extraction</span>
-                <span class="badge badge--secondary tech-badge">Metadata Tables</span>
+            <article class="case-card reveal delay-1">
+              <p class="card-kicker">Pipeline</p>
+              <h2>Small private data platform.</h2>
+              <div class="case-flow">
+                <div class="flow-step">
+                  <strong>01</strong>
+                  <span>Scan configured folders</span>
+                </div>
+                <div class="flow-step">
+                  <strong>02</strong>
+                  <span>Extract text and metadata</span>
+                </div>
+                <div class="flow-step">
+                  <strong>03</strong>
+                  <span>Store records in SQLite</span>
+                </div>
+                <div class="flow-step">
+                  <strong>04</strong>
+                  <span>Rank and return snippets</span>
+                </div>
               </div>
-            </div>
+            </article>
 
-            <div class="sidebar-card project-meta-card">
-              <h3>Project Snapshot</h3>
-              <ul class="sidebar-list">
-                <li><strong>Main workflow:</strong> local ingestion and ranked retrieval</li>
-                <li><strong>Use case:</strong> offline study and focused reading</li>
-                <li><strong>Data source:</strong> personal and local document files</li>
-                <li><strong>Primary goal:</strong> structured search over unstructured files</li>
+            <article class="case-card reveal delay-2">
+              <p class="card-kicker">Decisions</p>
+              <h2>Local-first, searchable, and auditable.</h2>
+              <ul class="case-list">
+                <li>Kept ingestion and retrieval on the local machine.</li>
+                <li>Stored file metadata separately from extracted content.</li>
+                <li>Prioritized quick movement from query to useful context.</li>
+                <li>Designed incremental indexing as the next production step.</li>
               </ul>
-            </div>
+            </article>
 
-            <div class="sidebar-card">
-              <h3>Why it matters</h3>
+            <article class="case-card reveal delay-3">
+              <p class="card-kicker">Next</p>
+              <h2>Improve reliability and filtering.</h2>
               <p>
-                It shows how data engineering ideas apply beyond dashboards:
-                collect source data, normalize it, store useful metadata, and
-                make the result easy to query.
+                Add incremental re-indexing, parse-quality checks, file-type
+                filters, tags, and indexing history tables.
               </p>
-            </div>
+            </article>
+          </div>
+
+          <aside class="case-sidebar reveal delay-2">
+            <section class="case-card">
+              <h3>Tech stack</h3>
+              <div class="tag-grid">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">Text extraction</span>
+                <span class="tag">Metadata tables</span>
+              </div>
+            </section>
+
+            <section class="case-card">
+              <h3>Snapshot</h3>
+              <ul class="case-list">
+                <li>Source: local document files</li>
+                <li>Workflow: ingestion and ranked retrieval</li>
+                <li>Goal: private search over unstructured files</li>
+              </ul>
+            </section>
 
             <a
+              class="button button-primary"
               href="https://github.com/kamatealip/scout"
-              class="btn-primary"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="ph ph-light ph-github-logo"></i> View Repository
+              <i class="ph ph-github-logo"></i>
+              View repository
             </a>
-
-            <a href="../../index.html#projects" class="btn-primary">
-              <i class="ph ph-light ph-arrow-left"></i> Back to Portfolio
+            <a class="button button-ghost" href="../../index.html#projects">
+              <i class="ph ph-arrow-left"></i>
+              Back to projects
             </a>
           </aside>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
-
-    <script>
-      const body = document.body;
-      const navLinks = document.getElementById("nav-links");
-      const hamburger = document.getElementById("hamburger");
-      const menuIcon = document.getElementById("menu-icon");
-      function toggleMenu(forceState) {
-        const shouldOpen =
-          typeof forceState === "boolean"
-            ? forceState
-            : !navLinks.classList.contains("active");
-
-        navLinks.classList.toggle("active", shouldOpen);
-        body.classList.toggle("menu-open", shouldOpen);
-
-        if (hamburger) {
-          hamburger.setAttribute("aria-expanded", String(shouldOpen));
-        }
-
-        if (menuIcon) {
-          menuIcon.className = shouldOpen
-            ? "ph ph-light ph-x"
-            : "ph ph-light ph-list";
-        }
-      }
-
-      hamburger.addEventListener("click", () => toggleMenu());
-
-      navLinks.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => toggleMenu(false));
-      });
-
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 900) toggleMenu(false);
-      });
-
-      const audioBtn = document.getElementById("audio-btn");
-      const audio = document.getElementById("bg-music");
-      let audioContext;
-      let analyser;
-      let dataArray;
-      let source;
-      let isPlaying = false;
-
-      function initAudioContext() {
-        if (!audioContext) {
-          audioContext = new (window.AudioContext || window.webkitAudioContext)();
-          analyser = audioContext.createAnalyser();
-          analyser.fftSize = 256;
-          const bufferLength = analyser.frequencyBinCount;
-          dataArray = new Uint8Array(bufferLength);
-
-          source = audioContext.createMediaElementSource(audio);
-          source.connect(analyser);
-          analyser.connect(audioContext.destination);
-        }
-      }
-
-      function updateUIPlaying() {
-        audioBtn.classList.add("playing");
-      }
-      function updateUIPaused() {
-        audioBtn.classList.remove("playing");
-      }
-
-      audioBtn.addEventListener("click", () => {
-        if (!audioContext) {
-          initAudioContext();
-        }
-        if (isPlaying) {
-          audio.pause();
-          updateUIPaused();
-        } else {
-          audio.play();
-          updateUIPlaying();
-          if (audioContext && audioContext.state === "suspended")
-            audioContext.resume();
-        }
-        isPlaying = !isPlaying;
-      });
-
-      const canvas = document.getElementById("network-canvas");
-      const ctx = canvas.getContext("2d");
-      const tileSize = 48;
-      let offsetX = 0;
-      let offsetY = 0;
-
-      function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resizeCanvas();
-
-      function getAudioIntensity() {
-        if (!analyser || !isPlaying || !dataArray) return 0;
-        analyser.getByteFrequencyData(dataArray);
-        const avg = dataArray.reduce((a, b) => a + b, 0) / dataArray.length;
-        return avg / 255;
-      }
-
-      function animateTiles(timestamp) {
-        const intensity = getAudioIntensity();
-        const speed = 0.08 + intensity * 0.18;
-        offsetX = (offsetX + speed) % tileSize;
-        offsetY = (offsetY + speed * 0.45) % tileSize;
-
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const pulse = (Math.sin(timestamp * 0.0005) + 1) * 0.5;
-        const alpha = 0.04 + pulse * 0.02 + intensity * 0.02;
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = `rgba(52, 178, 123, ${alpha.toFixed(3)})`;
-
-        for (let x = -tileSize; x < canvas.width + tileSize; x += tileSize) {
-          const px = x + offsetX;
-          ctx.beginPath();
-          ctx.moveTo(px, 0);
-          ctx.lineTo(px, canvas.height);
-          ctx.stroke();
-        }
-        for (let y = -tileSize; y < canvas.height + tileSize; y += tileSize) {
-          const py = y + offsetY;
-          ctx.beginPath();
-          ctx.moveTo(0, py);
-          ctx.lineTo(canvas.width, py);
-          ctx.stroke();
-        }
-
-        requestAnimationFrame(animateTiles);
-      }
-
-      window.addEventListener("resize", resizeCanvas);
-      animateTiles(0);
-
-      const fadeObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) entry.target.classList.add("visible");
-          });
-        },
-        { threshold: 0.1 },
-      );
-      document
-        .querySelectorAll(".fade-up")
-        .forEach((el) => fadeObserver.observe(el));
-    </script>
   </body>
 </html>

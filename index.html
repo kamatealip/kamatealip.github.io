@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alip Kamate | manuscript portfolio</title>
+    <title>Alip Kamate | Data Engineer & Web Developer</title>
     <meta
       name="description"
-      content="Ancient manuscript inspired portfolio for Alip Kamate, data engineer focused on python, sql, etl pipelines, spark, kafka, airflow, docker, aws, and machine learning."
+      content="Minimal portfolio for Alip Kamate, data engineer and web developer focused on Python, SQL, JavaScript, APIs, data pipelines, and clean interfaces."
     />
     <meta name="author" content="Alip Kamate" />
     <meta
       name="keywords"
-      content="data engineer, python, sql, etl, airflow, spark, kafka, docker, aws, machine learning"
+      content="Alip Kamate, data engineer, web developer, python, sql, javascript, fastapi, sveltekit, html, css"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@400;500;600;700;800&family=Marcellus&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <link
       rel="apple-touch-icon"
@@ -40,272 +40,412 @@
       href="./assets/favicon_io/favicon-16x16.png"
     />
     <link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
-    <link rel="stylesheet" href="./assets/manuscript.css" />
+    <link rel="stylesheet" href="./assets/cosmic.css" />
+    <script src="./assets/cosmic.js" defer></script>
   </head>
-  <body class="manuscript-portfolio">
-    <div class="paper-noise" aria-hidden="true"></div>
-    <div class="illumination" id="illumination" aria-hidden="true"></div>
-    <div class="dust-field" id="dust-field" aria-hidden="true"></div>
+  <body class="cosmic-page home-page theme-home">
+    <div class="space-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" data-cursor-glow aria-hidden="true"></div>
 
-    <nav class="archive-nav" aria-label="Primary navigation">
-      <a class="archive-brand" href="#home" data-panel="0" aria-label="Alip Kamate home">
-        <span>Alip</span>
-        <small>royal archive</small>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand-link" href="#home" aria-label="Alip Kamate home">
+        <span class="brand-glyph" aria-hidden="true"><span></span><span></span></span>
+        <span class="brand-copy">
+          <strong>Alip</strong>
+          <span>data + web</span>
+        </span>
       </a>
+
+      <div class="nav-links">
+        <a class="is-active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="./resume.html">Resume</a>
+      </div>
+
       <button
-        class="menu-seal"
-        id="menu-toggle"
+        class="icon-button mobile-toggle"
         type="button"
+        data-menu-toggle
         aria-label="Toggle navigation"
         aria-expanded="false"
       >
         <i class="ph ph-list"></i>
       </button>
-      <div class="archive-links" id="nav-links">
-        <a class="is-active" href="#home" data-panel="0">home</a>
-        <a href="#about" data-panel="1">about</a>
-        <a href="#skills" data-panel="2">skills</a>
-        <a href="#projects" data-panel="3">projects</a>
-        <a href="#experience" data-panel="4">experience</a>
-        <a href="#contact" data-panel="5">contact</a>
-        <a class="resume-link" href="./assets/kamatealip_2026_6.pdf" download="kamatealip_2026_6.pdf">
-          resume
-        </a>
-      </div>
     </nav>
 
-    <main class="archive-stage" aria-live="polite">
-      <div class="archive-track" id="archive-track">
-        <section class="archive-panel home-panel is-current" id="home" data-index="0">
-          <div class="manuscript-frame hero-frame">
-            <div class="ornament top-left" aria-hidden="true"></div>
-            <div class="ornament top-right" aria-hidden="true"></div>
-            <div class="ornament bottom-left" aria-hidden="true"></div>
-            <div class="ornament bottom-right" aria-hidden="true"></div>
-            <p class="folio-label">data engineer / data platform engineer</p>
-            <p class="calligraphy">Alip Kamate</p>
-            <h1>architect of intelligent data systems</h1>
-            <p class="hero-subtitle">transforming raw information into scalable intelligence.</p>
-            <p class="hero-line">python, sql, etl, warehouse modeling, airflow, spark, kafka, and analytics-ready datasets.</p>
-            <p class="ink-script" id="ink-line">mapping raw data into trusted ledgers</p>
-            <div class="hero-actions">
-              <button class="royal-seal" type="button" data-panel="3">
-                <span>view projects</span>
-              </button>
-              <a class="letter-button" href="./assets/kamatealip_2026_6.pdf" download="kamatealip_2026_6.pdf">
-                download resume
+    <main class="page-shell">
+      <section class="hero-section section-home" id="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Data engineer / web developer</p>
+          <h1 class="hero-title">Alip Kamate</h1>
+          <p class="lead">
+            I build reliable data pipelines and clean web interfaces for
+            practical, easy-to-use products.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              <i class="ph ph-squares-four"></i>
+              View projects
+            </a>
+            <a
+              class="button button-ghost"
+              href="./assets/kamatealip_2026_6.pdf"
+              download="kamatealip_2026_6.pdf"
+            >
+              <i class="ph ph-file-arrow-down"></i>
+              Resume PDF
+            </a>
+          </div>
+          <div class="hero-meta" aria-label="Core skills">
+            <span class="meta-pill">Python</span>
+            <span class="meta-pill">SQL</span>
+            <span class="meta-pill">JavaScript</span>
+            <span class="meta-pill">FastAPI</span>
+            <span class="meta-pill">SvelteKit</span>
+            <span class="meta-pill">HTML / CSS</span>
+          </div>
+        </div>
+
+        <div class="hero-visual hero-card reveal delay-1">
+          <div class="capability-board" aria-label="Core capability areas">
+            <article class="capability-panel">
+              <i class="ph ph-database"></i>
+              <p class="card-kicker">Data engineering</p>
+              <h2>Pipelines, models, validation.</h2>
+              <ul>
+                <li>Python ingestion</li>
+                <li>SQL transformations</li>
+                <li>Warehouse-ready datasets</li>
+              </ul>
+            </article>
+            <article class="capability-panel">
+              <i class="ph ph-browser"></i>
+              <p class="card-kicker">Web development</p>
+              <h2>Interfaces, APIs, products.</h2>
+              <ul>
+                <li>Responsive HTML / CSS</li>
+                <li>JavaScript and SvelteKit</li>
+                <li>FastAPI backends</li>
+              </ul>
+            </article>
+          </div>
+          <div class="capability-strip" aria-label="Tools">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>JavaScript</span>
+            <span>FastAPI</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-edge" aria-hidden="true"></div>
+
+      <section class="content-section section-about" id="about">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-kicker">About</p>
+            <h2 class="section-title">Clear data systems.</h2>
+          </div>
+          <p class="section-copy">
+            BCA graduate focused on practical data engineering and web
+            development: pipelines, APIs, clean interfaces, and analytics-ready
+            tables.
+          </p>
+        </header>
+
+        <div class="about-layout">
+          <article class="glass-panel portrait-panel home-art-panel reveal delay-1">
+            <h2>Alip Kamate</h2>
+            <p>Data engineer and web developer building useful project systems.</p>
+          </article>
+
+          <article class="glass-panel about-card reveal delay-2">
+            <p class="card-kicker">Best fit</p>
+            <h3>Data engineering plus web development for complete products.</h3>
+            <p>
+              I enjoy turning messy source data into clean datasets, APIs, and
+              user interfaces that are simple to understand and easy to use.
+            </p>
+            <div class="proof-strip" aria-label="Profile highlights">
+              <div class="proof-item">
+                <strong>80.84%</strong>
+                <span>HSC science</span>
+              </div>
+              <div class="proof-item">
+                <strong>72%</strong>
+                <span>BCA completed</span>
+              </div>
+              <div class="proof-item">
+                <strong>2</strong>
+                <span>Linked case studies</span>
+              </div>
+            </div>
+            <ul class="focus-list">
+              <li>Data cleaning, validation, and warehouse-ready models</li>
+              <li>Responsive web interfaces and API-backed products</li>
+              <li>Entry-level data engineer, web developer, and analytics roles</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section section-skills" id="skills">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-kicker">Skills</p>
+            <h2 class="section-title">Balanced toolkit.</h2>
+          </div>
+          <p class="section-copy">
+            A compact stack for data pipelines, APIs, responsive interfaces,
+            and reproducible project work.
+          </p>
+        </header>
+
+        <div class="skills-layout">
+          <div class="skill-cloud reveal delay-1">
+            <article class="skill-tile">
+              <i class="ph ph-code"></i>
+              <h3>Python</h3>
+              <p>Ingestion scripts and automation.</p>
+            </article>
+            <article class="skill-tile">
+              <i class="ph ph-database"></i>
+              <h3>SQL</h3>
+              <p>Transformations and marts.</p>
+            </article>
+            <article class="skill-tile">
+              <i class="ph ph-flow-arrow"></i>
+              <h3>FastAPI</h3>
+              <p>API design for data products.</p>
+            </article>
+            <article class="skill-tile">
+              <i class="ph ph-brackets-curly"></i>
+              <h3>JavaScript</h3>
+              <p>Interactive web interfaces.</p>
+            </article>
+            <article class="skill-tile">
+              <i class="ph ph-layout"></i>
+              <h3>HTML / CSS</h3>
+              <p>Responsive, polished layouts.</p>
+            </article>
+            <article class="skill-tile">
+              <i class="ph ph-browser"></i>
+              <h3>SvelteKit</h3>
+              <p>Product-style web apps.</p>
+            </article>
+          </div>
+
+          <aside class="glass-panel skill-note reveal delay-2">
+            <p class="card-kicker">Also comfortable with</p>
+            <h3>Tools that keep projects clean and repeatable.</h3>
+            <div class="tag-grid">
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">dbt</span>
+              <span class="tag">SvelteKit</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">HTML / CSS</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Git</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Airflow</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="content-section section-projects" id="projects">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-kicker">Projects</p>
+            <h2 class="section-title">Built from raw data.</h2>
+          </div>
+          <p class="section-copy">
+            Compact case studies showing ingestion, cleaning, storage,
+            retrieval, and practical interfaces.
+          </p>
+        </header>
+
+        <div class="projects-layout">
+          <article class="project-card featured reveal delay-1">
+            <p class="card-kicker">Data product</p>
+            <h3>Book Metadata Pipeline</h3>
+            <p>
+              Scraped, cleaned, and prepared book catalog data for search,
+              recommendations, and reporting.
+            </p>
+            <div class="tag-grid">
+              <span class="tag">Scrapy</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Scikit-Learn</span>
+            </div>
+            <a class="button button-ghost" href="./projects/book-recommendation/index.html">
+              Case study
+              <i class="ph ph-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="project-card featured reveal delay-2">
+            <p class="card-kicker">Search system</p>
+            <h3>Local Document Indexing</h3>
+            <p>
+              A local ingestion and retrieval pipeline for documents, metadata,
+              SQLite storage, and ranked snippets.
+            </p>
+            <div class="tag-grid">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">SQLite</span>
+            </div>
+            <a class="button button-ghost" href="./projects/local-document-search/index.html">
+              Case study
+              <i class="ph ph-arrow-right"></i>
+            </a>
+          </article>
+
+          <article class="project-card reveal delay-1">
+            <p class="card-kicker">Pipeline design</p>
+            <h3>Retail Sales ETL</h3>
+            <p>Batch ingestion, staging, validation checks, and BI-ready marts.</p>
+            <div class="tag-grid">
+              <span class="tag">Airflow</span>
+              <span class="tag">dbt</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-2">
+            <p class="card-kicker">Analytics</p>
+            <h3>Customer 360 Mart</h3>
+            <p>Fact and dimension modeling for retention and activity metrics.</p>
+            <div class="tag-grid">
+              <span class="tag">SQL</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-3">
+            <p class="card-kicker">Streaming</p>
+            <h3>Kafka Metrics Plan</h3>
+            <p>Event ingestion design for near-real-time reporting workflows.</p>
+            <div class="tag-grid">
+              <span class="tag">Kafka</span>
+              <span class="tag">Spark</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section section-experience" id="experience">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-kicker">Experience</p>
+            <h2 class="section-title">Proof of practice.</h2>
+          </div>
+          <p class="section-copy">
+            Portfolio work shaped around production habits: readable code,
+            validation, clear schemas, and documented decisions.
+          </p>
+        </header>
+
+        <div class="timeline-layout">
+          <aside class="timeline-index reveal delay-1" aria-label="Experience index">
+            <span>Ingest</span>
+            <span>Model</span>
+            <span>Validate</span>
+          </aside>
+          <div class="timeline">
+            <article class="glass-panel timeline-item reveal delay-1">
+              <p class="timeline-date">Portfolio project</p>
+              <h3>Retail Sales Data Pipeline</h3>
+              <p>
+                Raw sales files staged into PostgreSQL, transformed with SQL,
+                and checked for nulls, duplicates, and schema drift.
+              </p>
+            </article>
+            <article class="glass-panel timeline-item reveal delay-2">
+              <p class="timeline-date">Analytics engineering</p>
+              <h3>Customer 360 Analytics Mart</h3>
+              <p>
+                Fact and dimension tables for retention, cohorts, customer
+                activity, and consistent dashboard metrics.
+              </p>
+            </article>
+            <article class="glass-panel timeline-item reveal delay-3">
+              <p class="timeline-date">Current focus</p>
+              <h3>Data platform foundations</h3>
+              <p>
+                Airflow, Spark, Kafka, Docker, AWS, and better operational
+                patterns for reliable entry-level data work.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section section-contact" id="contact">
+        <div class="contact-layout">
+          <article class="glass-panel contact-card reveal">
+            <p class="section-kicker">Contact</p>
+            <h2>Let us build something useful.</h2>
+            <p>
+              Open to junior data engineer, analytics engineer, and data
+              platform internship opportunities.
+            </p>
+            <div class="inline-actions">
+              <a class="button button-primary" href="mailto:kamatealip1@gmail.com">
+                <i class="ph ph-paper-plane-tilt"></i>
+                Email me
+              </a>
+              <a class="button button-ghost" href="./resume.html">
+                <i class="ph ph-identification-card"></i>
+                Resume page
               </a>
             </div>
-            <button class="next-arrow" type="button" data-panel="1" aria-label="Go to About">
-              <i class="ph ph-arrow-right"></i>
-            </button>
-          </div>
-        </section>
+          </article>
 
-        <section class="archive-panel" id="about" data-index="1">
-          <div class="panel-scroll">
-            <header class="section-heading">
-              <span>folio one</span>
-              <h2>about</h2>
-            </header>
-            <div class="about-grid bento-grid">
-              <article class="archive-card profile-card">
-                <p class="calligraphy mini-script">Alip Kamate</p>
-                <p class="folio-label">junior data engineer</p>
-                <p>Jath, Sangli, Maharashtra</p>
-              </article>
-              <article class="archive-card biography-card">
-                <h3>profile summary</h3>
-                <p>
-                  bca student focused on junior data engineering work: python
-                  ingestion scripts, sql transformations, data validation,
-                  warehouse-ready models, and clear documentation.
-                </p>
-              </article>
-              <article class="archive-card fit-card">
-                <h3>best fit</h3>
-                <ul>
-                  <li>junior data engineering teams that value clarity</li>
-                  <li>python and sql-heavy pipeline work</li>
-                  <li>data cleaning, validation, and warehouse-ready models</li>
-                  <li>open to junior data engineer and analytics engineer roles</li>
-                </ul>
-              </article>
-              <article class="archive-card education-card">
-                <h3>education</h3>
-                <div class="script-entry">
-                  <strong>bachelor of computer applications</strong>
-                  <span>Shivaji University, Kolhapur</span>
-                  <span>currently pursuing</span>
-                  <em>2021 - present</em>
-                </div>
-                <div class="script-entry">
-                  <strong>hsc science</strong>
-                  <span>Raje Ramrao College</span>
-                  <span>secured 80.84%</span>
-                  <em>2020</em>
-                </div>
-              </article>
-            </div>
+          <div class="contact-grid reveal delay-1">
+            <a class="contact-link" href="mailto:kamatealip1@gmail.com">
+              <i class="ph ph-envelope-simple"></i>
+              <strong>Email</strong>
+              <span>kamatealip1@gmail.com</span>
+            </a>
+            <a class="contact-link" href="tel:+917387705851">
+              <i class="ph ph-phone"></i>
+              <strong>Phone</strong>
+              <span>+91 7387705851</span>
+            </a>
+            <a
+              class="contact-link"
+              href="https://github.com/kamatealip/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="ph ph-github-logo"></i>
+              <strong>GitHub</strong>
+              <span>github.com/kamatealip</span>
+            </a>
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/kamatealip/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="ph ph-linkedin-logo"></i>
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/kamatealip</span>
+            </a>
           </div>
-        </section>
-
-        <section class="archive-panel" id="skills" data-index="2">
-          <div class="panel-scroll">
-            <header class="section-heading">
-              <span>folio two</span>
-              <h2>skills</h2>
-            </header>
-            <div class="skills-bento bento-grid">
-              <article class="archive-card skill-card major"><i class="ph ph-code"></i><h3>python</h3><p>ingestion scripts</p></article>
-              <article class="archive-card skill-card"><i class="ph ph-database"></i><h3>sql</h3><p>transformations</p></article>
-              <article class="archive-card skill-card"><i class="ph ph-lightning"></i><h3>spark</h3><p>scalable data</p></article>
-              <article class="archive-card skill-card"><i class="ph ph-broadcast"></i><h3>kafka</h3><p>event streams</p></article>
-              <article class="archive-card skill-card"><i class="ph ph-flow-arrow"></i><h3>airflow</h3><p>scheduling</p></article>
-              <article class="archive-card skill-card"><i class="ph ph-cube"></i><h3>docker</h3><p>reproducible work</p></article>
-              <article class="archive-card skill-card"><i class="ph ph-cloud"></i><h3>aws</h3><p>cloud systems</p></article>
-              <article class="archive-card skill-card"><i class="ph ph-brain"></i><h3>machine learning</h3><p>recommendation systems</p></article>
-              <article class="archive-card skill-ledger">
-                <h3>more craft</h3>
-                <div class="seal-list">
-                  <span>pandas & numpy</span>
-                  <span>postgresql</span>
-                  <span>dbt</span>
-                  <span>git & github</span>
-                  <span>linux</span>
-                  <span>etl and elt pipelines</span>
-                  <span>warehouse modeling</span>
-                  <span>data validation</span>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="archive-panel" id="projects" data-index="3">
-          <div class="panel-scroll">
-            <header class="section-heading">
-              <span>folio three</span>
-              <h2>projects</h2>
-            </header>
-            <div class="projects-bento bento-grid">
-              <article class="archive-card project-card featured">
-                <span>data product</span>
-                <h3>book recommendation system</h3>
-                <p>scraped, cleaned, and transformed book metadata for recommendation features.</p>
-                <div class="seal-list"><span>scrapy</span><span>pandas</span><span>machine learning</span></div>
-                <a href="projects/book-recommendation/index.html">read case study</a>
-              </article>
-              <article class="archive-card project-card featured">
-                <span>case study</span>
-                <h3>document search engine</h3>
-                <p>local ingestion and indexing pipeline for documents, metadata, sqlite storage, and ranked retrieval.</p>
-                <div class="seal-list"><span>python</span><span>fastapi</span><span>sqlite</span></div>
-                <a href="projects/local-document-search/index.html">read case study</a>
-                <a href="https://github.com/kamatealip/scout" target="_blank" rel="noreferrer">github</a>
-              </article>
-              <article class="archive-card project-card">
-                <span>pipeline design</span>
-                <h3>etl pipeline system</h3>
-                <p>batch ingestion, staging, validation checks, marts, and bi-ready outputs.</p>
-                <div class="seal-list"><span>airflow</span><span>dbt</span><span>postgresql</span></div>
-              </article>
-              <article class="archive-card project-card">
-                <span>growth area</span>
-                <h3>kafka analytics platform</h3>
-                <p>streaming design for event ingestion and near-real-time metrics.</p>
-                <div class="seal-list"><span>kafka</span><span>spark</span><span>docker</span></div>
-              </article>
-              <article class="archive-card project-card">
-                <span>machine learning</span>
-                <h3>machine learning recommendation engine</h3>
-                <p>turning machine learning pipelines into reliable systems.</p>
-                <div class="seal-list"><span>machine learning</span><span>python</span><span>data validation</span></div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="archive-panel" id="experience" data-index="4">
-          <div class="panel-scroll">
-            <header class="section-heading">
-              <span>folio four</span>
-              <h2>experience</h2>
-            </header>
-            <div class="royal-timeline">
-              <article class="timeline-item archive-card">
-                <span>portfolio project • data engineering</span>
-                <h3>retail sales data pipeline</h3>
-                <em>etl</em>
-                <ul>
-                  <li>built a batch ingestion flow for raw sales files and staged them into postgresql.</li>
-                  <li>modeled daily revenue, product, and customer marts with sql transformations.</li>
-                  <li>added validation checks for nulls, duplicates, and schema drift.</li>
-                </ul>
-              </article>
-              <article class="timeline-item archive-card">
-                <span>portfolio project • analytics engineering</span>
-                <h3>customer 360 analytics mart</h3>
-                <em>warehouse</em>
-                <ul>
-                  <li>designed fact and dimension tables from customer, order, product, and support data.</li>
-                  <li>wrote tested sql models for retention, cohort, and activity reporting.</li>
-                  <li>documented metric definitions for consistent dashboards.</li>
-                </ul>
-              </article>
-              <article class="timeline-item archive-card">
-                <span>signals worth reviewing</span>
-                <h3>quick proof</h3>
-                <ul>
-                  <li>two linked case studies show source data, cleaning, storage, retrieval, and usable interfaces.</li>
-                  <li>hsc science: 80.84%</li>
-                  <li>github: github.com/kamatealip</li>
-                  <li>resume pdf available immediately</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="archive-panel" id="contact" data-index="5">
-          <div class="panel-scroll contact-scroll">
-            <header class="section-heading">
-              <span>folio five</span>
-              <h2>contact</h2>
-            </header>
-            <div class="contact-grid">
-              <form class="letter-form archive-card" action="mailto:kamatealip1@gmail.com" method="post" enctype="text/plain">
-                <label>
-                  <span>your name</span>
-                  <input name="name" type="text" autocomplete="name" />
-                </label>
-                <label>
-                  <span>your email</span>
-                  <input name="email" type="email" autocomplete="email" />
-                </label>
-                <label>
-                  <span>message</span>
-                  <textarea name="message" rows="5"></textarea>
-                </label>
-                <button class="royal-seal submit-seal" type="submit"><span>send letter</span></button>
-              </form>
-              <aside class="archive-card contact-ledger">
-                <h3>reach me</h3>
-                <a href="mailto:kamatealip1@gmail.com"><i class="ph ph-envelope-simple"></i>kamatealip1@gmail.com</a>
-                <a href="tel:+917387705851"><i class="ph ph-phone"></i>+91 7387705851</a>
-                <span><i class="ph ph-map-pin"></i>Jath, Sangli, Maharashtra</span>
-                <a href="https://kamatealip.github.io/" target="_blank" rel="noreferrer"><i class="ph ph-globe"></i>kamatealip.github.io</a>
-                <a href="https://github.com/kamatealip/" target="_blank" rel="noreferrer"><i class="ph ph-github-logo"></i>github.com/kamatealip</a>
-                <a href="https://www.linkedin.com/in/kamatealip/" target="_blank" rel="noreferrer"><i class="ph ph-linkedin-logo"></i>linkedin.com/in/kamatealip</a>
-                <a href="./assets/kamatealip_2026_6.pdf" download="kamatealip_2026_6.pdf"><i class="ph ph-file-arrow-down"></i>download resume</a>
-              </aside>
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
-    <div class="panel-indicator" id="panel-indicator" aria-label="Section progress"></div>
-    <script src="./assets/manuscript.js" defer></script>
+    <footer class="footer">
+      <p>Alip Kamate - Data Engineer & Web Developer Portfolio</p>
+    </footer>
   </body>
 </html>
