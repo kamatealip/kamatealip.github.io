@@ -1,3 +1,94 @@
+:root {
+  color-scheme: dark;
+  --bg: #000000;
+  --text: #f3f3f3;
+  --muted: #cfcfcf;
+  --accent: #4ade80;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.25rem 3rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  margin-top: 0;
+}
+
+p,
+li {
+  color: var(--muted);
+  margin: 0.4rem 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.2em;
+  padding-bottom: 0.08em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #2b2b2b;
+  margin: 1.25rem 0;
+}
+
+ul {
+  padding-left: 1.1rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.social-links li {
+  margin: 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+
+.section-heading hr {
+  flex: 1;
+  border: 0;
+  height: 1px;
+  background: #2b2b2b;
+}
+
 .site-header {
   display: grid;
   grid-template-columns: 3rem minmax(0, 1fr);
@@ -130,19 +221,34 @@ body:has(.rect-mark:active) main ul:not(.social-links) > li::before {
   transform: rotate(45deg);
 }
 
-a,
-a:visited,
-a:hover,
-a:active {
-  color: #ffffff;
-  text-decoration-color: var(--accent);
-}
-
 body:has(.rect-mark:active) a,
 body:has(.rect-mark:active) a:visited,
 body:has(.rect-mark:active) a:hover,
 body:has(.rect-mark:active) a:active {
   text-decoration-color: #f43841;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(74, 222, 128, 0.18);
+  text-align: center;
+  color: #8f8f8f;
+  font-size: 0.92rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+::selection {
+  background: rgba(74, 222, 128, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(74, 222, 128, 0.3);
+  color: #ffffff;
 }
 
 @keyframes rectangle-glow {
@@ -180,6 +286,13 @@ body:has(.rect-mark:active) a:active {
 
   .rect-mark {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .social-links {
+    flex-direction: column;
+    gap: 0.4rem;
   }
 }
 
