@@ -111,6 +111,8 @@ html.motion-ready .skill-group,
 html.motion-ready .contact-card {
   opacity: 0;
   --reveal-y: 34px;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
   transition:
     opacity 0.85s var(--motion-ease),
     transform 0.95s var(--motion-ease),
@@ -127,7 +129,7 @@ html.motion-ready .project-card,
 html.motion-ready .workflow-step,
 html.motion-ready .skill-group,
 html.motion-ready .contact-card {
-  transform: perspective(1000px) translate3d(0, var(--reveal-y), 0) rotateX(1.5deg);
+  transform: perspective(1000px) translate3d(0, var(--reveal-y), 0) rotateX(calc(1.5deg + var(--tilt-x))) rotateY(var(--tilt-y));
 }
 
 html.motion-ready .section.is-visible .section-header,
@@ -143,7 +145,7 @@ html.motion-ready .section.is-visible .project-card,
 html.motion-ready .section.is-visible .workflow-step,
 html.motion-ready .section.is-visible .skill-group,
 html.motion-ready .section.is-visible .contact-card {
-  transform: perspective(1000px) translate3d(0, 0, 0) rotateX(0deg);
+  transform: perspective(1000px) translate3d(0, 0, 0) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
 }
 
 html.motion-ready .project-card:nth-child(2),
