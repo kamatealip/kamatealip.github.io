@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#09090b" />
+    <meta name="theme-color" content="#0b1020" />
     <meta
       name="description"
       content="Alip Kamate — Python Developer and Agentic AI Engineer building APIs, AI agents, RAG systems, search engines, and production-focused web applications."
@@ -54,9 +54,12 @@
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Engineering focus">
-          <div class="code-window-bar"><span></span><span></span><span></span><small>agent.py</small></div>
-          <pre><code><span class="code-muted">workflow =</span> [
+        <aside class="hero-visual" aria-label="Engineering focus">
+          <div class="parallax-orb orb-one" data-parallax="slow"></div>
+          <div class="parallax-orb orb-two" data-parallax="fast"></div>
+          <div class="hero-card" data-parallax="card">
+            <div class="code-window-bar"><span></span><span></span><span></span><small>agent.py</small></div>
+            <pre><code><span class="code-muted">workflow =</span> [
   <span class="code-key">"understand"</span>,
   <span class="code-key">"plan"</span>,
   <span class="code-key">"retrieve"</span>,
@@ -71,70 +74,78 @@
   <span class="code-key">"agents"</span>: <span class="code-string">"LangGraph / LangChain"</span>,
   <span class="code-key">"data"</span>: <span class="code-string">"PostgreSQL / Redis"</span>,
 }</code></pre>
+            <div class="hero-card-footer">
+              <span>stateful</span>
+              <span>tool-using</span>
+              <span>validated</span>
+            </div>
+          </div>
         </aside>
       </section>
 
-      <section class="section container" id="work">
-        <div class="section-header">
-          <div>
-            <p class="section-label">01 / Selected work</p>
-            <h2>Projects that show how I build.</h2>
+      <section class="section section-work" id="work">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-label">01 / Selected work</p>
+              <h2>Projects that show how I build.</h2>
+            </div>
+            <p class="section-note">Python systems, agentic AI, search, ML, and full-stack products.</p>
           </div>
-          <p class="section-note">Python systems, agentic AI, search, ML, and full-stack products.</p>
-        </div>
 
-        <div class="project-grid">
-          <article class="project-card project-card-featured">
-            <div class="project-topline"><span>Agentic AI</span><span>01</span></div>
-            <h3>TripMind</h3>
-            <p>Multi-agent travel planning system using LangGraph, LangChain, Gemini, Tavily search, flight tools, and PostgreSQL-backed state persistence.</p>
-            <div class="tag-row"><span>LangGraph</span><span>Python</span><span>Gemini</span><span>PostgreSQL</span></div>
-            <a class="project-link" href="https://github.com/kamatealip/tripmind" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-          </article>
+          <div class="project-grid">
+            <article class="project-card project-card-featured">
+              <div class="project-topline"><span>Agentic AI</span><span>01</span></div>
+              <h3>TripMind</h3>
+              <p>Multi-agent travel planning system using LangGraph, LangChain, Gemini, Tavily search, flight tools, and PostgreSQL-backed state persistence.</p>
+              <div class="tag-row"><span>LangGraph</span><span>Python</span><span>Gemini</span><span>PostgreSQL</span></div>
+              <a class="project-link" href="https://github.com/kamatealip/tripmind" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+            </article>
 
-          <article class="project-card">
-            <div class="project-topline"><span>Search / IR</span><span>02</span></div>
-            <h3>Scout</h3>
-            <p>Local documentation search engine with Python, Flask, SQLite, inverted indexing, ranking, snippets, highlighting, and section-aware retrieval.</p>
-            <div class="tag-row"><span>Python</span><span>Flask</span><span>SQLite</span><span>BM25-style ranking</span></div>
-            <a class="project-link" href="https://github.com/kamatealip/scout" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-          </article>
+            <article class="project-card">
+              <div class="project-topline"><span>Search / IR</span><span>02</span></div>
+              <h3>Scout</h3>
+              <p>Local documentation search engine with Python, Flask, SQLite, inverted indexing, ranking, snippets, highlighting, and section-aware retrieval.</p>
+              <div class="tag-row"><span>Python</span><span>Flask</span><span>SQLite</span><span>BM25-style ranking</span></div>
+              <a class="project-link" href="https://github.com/kamatealip/scout" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+            </article>
 
-          <article class="project-card">
-            <div class="project-topline"><span>Product</span><span>03</span></div>
-            <h3>Attendance Manager</h3>
-            <p>Attendance management product being built incrementally with a modern Next.js UI, daily attendance flows, and persistent local state.</p>
-            <div class="tag-row"><span>Next.js</span><span>TypeScript</span><span>React</span><span>Product UI</span></div>
-            <a class="project-link" href="https://github.com/kamatealip/attendance-manager" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-          </article>
+            <article class="project-card">
+              <div class="project-topline"><span>Product</span><span>03</span></div>
+              <h3>Attendance Manager</h3>
+              <p>Attendance management product being built incrementally with a modern Next.js UI, daily attendance flows, and persistent local state.</p>
+              <div class="tag-row"><span>Next.js</span><span>TypeScript</span><span>React</span><span>Product UI</span></div>
+              <a class="project-link" href="https://github.com/kamatealip/attendance-manager" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+            </article>
 
-          <article class="project-card">
-            <div class="project-topline"><span>Full Stack</span><span>04</span></div>
-            <h3>QuickShow</h3>
-            <p>Movie booking platform with Next.js, TypeScript, Supabase, authentication, real-time seat availability, PostgreSQL data models, and admin workflows.</p>
-            <div class="tag-row"><span>Next.js</span><span>Supabase</span><span>PostgreSQL</span><span>Auth</span></div>
-            <a class="project-link" href="https://github.com/kamatealip/quickshow" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-          </article>
+            <article class="project-card">
+              <div class="project-topline"><span>Full Stack</span><span>04</span></div>
+              <h3>QuickShow</h3>
+              <p>Movie booking platform with Next.js, TypeScript, Supabase, authentication, real-time seat availability, PostgreSQL data models, and admin workflows.</p>
+              <div class="tag-row"><span>Next.js</span><span>Supabase</span><span>PostgreSQL</span><span>Auth</span></div>
+              <a class="project-link" href="https://github.com/kamatealip/quickshow" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+            </article>
 
-          <article class="project-card">
-            <div class="project-topline"><span>Security</span><span>05</span></div>
-            <h3>PassNest</h3>
-            <p>Secure password manager and API using FastAPI and Svelte, with JWT authentication, cryptographic protection, and password-strength analysis.</p>
-            <div class="tag-row"><span>FastAPI</span><span>Python</span><span>Svelte</span><span>JWT</span></div>
-            <a class="project-link" href="https://github.com/kamatealip/passnest" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-          </article>
+            <article class="project-card">
+              <div class="project-topline"><span>Security</span><span>05</span></div>
+              <h3>PassNest</h3>
+              <p>Secure password manager and API using FastAPI and Svelte, with JWT authentication, cryptographic protection, and password-strength analysis.</p>
+              <div class="tag-row"><span>FastAPI</span><span>Python</span><span>Svelte</span><span>JWT</span></div>
+              <a class="project-link" href="https://github.com/kamatealip/passnest" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+            </article>
 
-          <article class="project-card">
-            <div class="project-topline"><span>Machine Learning</span><span>06</span></div>
-            <h3>Transaction Fraud Detection</h3>
-            <p>Fraud-scoring service with Flask, XGBoost, and scikit-learn for validated real-time risk classification and batch inference workflows.</p>
-            <div class="tag-row"><span>Python</span><span>XGBoost</span><span>Flask</span><span>Pandas</span></div>
-            <a class="project-link" href="https://github.com/kamatealip/transaction-fraud-detection" target="_blank" rel="noopener noreferrer">View repository ↗</a>
-          </article>
+            <article class="project-card">
+              <div class="project-topline"><span>Machine Learning</span><span>06</span></div>
+              <h3>Transaction Fraud Detection</h3>
+              <p>Fraud-scoring service with Flask, XGBoost, and scikit-learn for validated real-time risk classification and batch inference workflows.</p>
+              <div class="tag-row"><span>Python</span><span>XGBoost</span><span>Flask</span><span>Pandas</span></div>
+              <a class="project-link" href="https://github.com/kamatealip/transaction-fraud-detection" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section section-alt" id="workflow">
+      <section class="section section-workflow" id="workflow">
         <div class="container">
           <div class="section-header">
             <div>
@@ -148,7 +159,7 @@
             <article class="workflow-step"><span>01</span><h3>Understand</h3><p>Parse the user's goal, constraints, context, and required output.</p></article>
             <article class="workflow-step"><span>02</span><h3>Plan</h3><p>Break the request into a stateful sequence of tasks and decisions.</p></article>
             <article class="workflow-step"><span>03</span><h3>Retrieve</h3><p>Bring in trusted context using RAG, search, databases, or APIs.</p></article>
-            <article class="workflow-step"><span>04</span><h3>Use tools</h3><p>Call external tools such as search, flight, data, or application services.</p></article>
+            <article class="workflow-step"><span>04</span><h3>Use tools</h3><p>Call external tools such as search, data, or application services.</p></article>
             <article class="workflow-step"><span>05</span><h3>Act</h3><p>Generate the next action, structured result, or product-side change.</p></article>
             <article class="workflow-step"><span>06</span><h3>Validate</h3><p>Check tool outputs, schemas, business rules, and failure paths.</p></article>
             <article class="workflow-step"><span>07</span><h3>Remember</h3><p>Persist useful state so multi-turn workflows can continue reliably.</p></article>
@@ -156,20 +167,22 @@
         </div>
       </section>
 
-      <section class="section container" id="skills">
-        <div class="section-header">
-          <div>
-            <p class="section-label">03 / Technical stack</p>
-            <h2>What I work with.</h2>
+      <section class="section section-skills" id="skills">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-label">03 / Technical stack</p>
+              <h2>What I work with.</h2>
+            </div>
           </div>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-group"><h3>Python &amp; Backend</h3><p>Python · FastAPI · Flask · Asyncio · REST APIs · WebSockets · Pydantic · SQLAlchemy · Celery · Redis · PyTest</p></div>
-          <div class="skill-group"><h3>Agentic AI &amp; RAG</h3><p>LangGraph · LangChain · Multi-agent systems · Tool calling · RAG · Hybrid search · Vector databases · Gemini · OpenAI · Claude · Guardrails</p></div>
-          <div class="skill-group"><h3>Data &amp; ML</h3><p>PostgreSQL · SQLite · Supabase · Pandas · NumPy · scikit-learn · XGBoost · ETL · Data pipelines</p></div>
-          <div class="skill-group"><h3>Frontend &amp; Product</h3><p>TypeScript · JavaScript · React · Next.js · Svelte / SvelteKit · Tailwind CSS · Responsive UI</p></div>
-          <div class="skill-group"><h3>DevOps &amp; Tooling</h3><p>Docker · Git · GitHub · Linux · Bash · CI/CD · Postman · Vercel · Cloud deployment</p></div>
-          <div class="skill-group"><h3>AI Development Tools</h3><p>Codex · Cursor · Claude · OpenCode · Antigravity</p></div>
+          <div class="skills-grid">
+            <div class="skill-group"><h3>Python &amp; Backend</h3><p>Python · FastAPI · Flask · Asyncio · REST APIs · WebSockets · Pydantic · SQLAlchemy · Celery · Redis · PyTest</p></div>
+            <div class="skill-group"><h3>Agentic AI &amp; RAG</h3><p>LangGraph · LangChain · Multi-agent systems · Tool calling · RAG · Hybrid search · Vector databases · Gemini · OpenAI · Claude · Guardrails</p></div>
+            <div class="skill-group"><h3>Data &amp; ML</h3><p>PostgreSQL · SQLite · Supabase · Pandas · NumPy · scikit-learn · XGBoost · ETL · Data pipelines</p></div>
+            <div class="skill-group"><h3>Frontend &amp; Product</h3><p>TypeScript · JavaScript · React · Next.js · Svelte / SvelteKit · Tailwind CSS · Responsive UI</p></div>
+            <div class="skill-group"><h3>DevOps &amp; Tooling</h3><p>Docker · Git · GitHub · Linux · Bash · CI/CD · Postman · Vercel · Cloud deployment</p></div>
+            <div class="skill-group"><h3>AI Development Tools</h3><p>Codex · Cursor · Claude · OpenCode · Antigravity</p></div>
+          </div>
         </div>
       </section>
 
@@ -192,5 +205,51 @@
       <span>© 2026 Alip Kamate</span>
       <span>Built with HTML + CSS · Hosted on GitHub Pages</span>
     </footer>
+
+    <script>
+      (() => {
+        const visual = document.querySelector(".hero-visual");
+        const layers = visual?.querySelectorAll("[data-parallax]");
+        if (!visual || !layers || !layers.length) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        let raf = 0;
+        let targetX = 0;
+        let targetY = 0;
+        let currentX = 0;
+        let currentY = 0;
+
+        const render = () => {
+          currentX += (targetX - currentX) * 0.08;
+          currentY += (targetY - currentY) * 0.08;
+
+          layers.forEach((layer) => {
+            const type = layer.dataset.parallax;
+            const multiplier = type === "fast" ? 1.25 : type === "slow" ? 0.55 : 0.8;
+            const scrollOffset = Math.min(window.scrollY * 0.035, 28);
+            layer.style.transform = `translate3d(${currentX * multiplier}px, ${currentY * multiplier + scrollOffset}px, 0)`;
+          });
+
+          raf = requestAnimationFrame(render);
+        };
+
+        const onPointerMove = (event) => {
+          const rect = visual.getBoundingClientRect();
+          targetX = ((event.clientX - rect.left) / rect.width - 0.5) * 18;
+          targetY = ((event.clientY - rect.top) / rect.height - 0.5) * 18;
+        };
+
+        const onPointerLeave = () => {
+          targetX = 0;
+          targetY = 0;
+        };
+
+        visual.addEventListener("pointermove", onPointerMove);
+        visual.addEventListener("pointerleave", onPointerLeave);
+        render();
+
+        window.addEventListener("beforeunload", () => cancelAnimationFrame(raf), { once: true });
+      })();
+    </script>
   </body>
 </html>
