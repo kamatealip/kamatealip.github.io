@@ -1,0 +1,262 @@
+/*
+   Cinematic motion layer
+   Keeps the existing visual system intact and adds depth, lighting,
+   scroll choreography, and pointer-driven 3D interaction.
+*/
+
+:root {
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --scroll-progress: 0%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: var(--scroll-progress);
+  height: 2px;
+  z-index: 1000;
+  pointer-events: none;
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--hero-accent), var(--ai-accent), var(--skills-accent));
+  box-shadow: 0 0 18px rgba(138, 230, 193, 0.24);
+}
+
+.hero {
+  perspective: 1400px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.hero-copy,
+.hero-visual {
+  will-change: transform;
+}
+
+.hero-visual {
+  transform-style: preserve-3d;
+}
+
+.hero-card {
+  transform-style: preserve-3d;
+  transition: box-shadow 0.45s var(--motion-ease), border-color 0.45s var(--motion-ease);
+}
+
+.hero-card:hover {
+  border-color: rgba(138, 230, 193, 0.24);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.44), 0 0 50px rgba(138, 230, 193, 0.08);
+}
+
+.section {
+  overflow: hidden;
+  isolation: isolate;
+  perspective: 1400px;
+  --parallax-y: 0px;
+  --content-y: 0px;
+  --pointer-x: 0px;
+  --pointer-y: 0px;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.56;
+  transform: translate3d(0, calc(var(--parallax-y) * 0.35), 0) scale(1.08);
+  transform-origin: center center;
+  will-change: transform;
+  background:
+    radial-gradient(
+      520px circle at calc(50% + var(--pointer-x)) calc(50% + var(--pointer-y)),
+      color-mix(in srgb, var(--section-accent, var(--hero-accent)) 13%, transparent),
+      transparent 62%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      color-mix(in srgb, var(--section-accent, var(--hero-accent)) 4%, transparent) 46%,
+      transparent 72%
+    );
+  transition: opacity 0.6s var(--motion-ease);
+}
+
+.section > .container {
+  position: relative;
+  z-index: 2;
+  transform: translate3d(0, var(--content-y), 0);
+  will-change: transform;
+}
+
+.section::before {
+  transition: opacity 0.7s var(--motion-ease), transform 0.7s var(--motion-ease);
+  transform: scaleX(0.32);
+  transform-origin: center;
+}
+
+.section.is-visible::before {
+  opacity: 0.9;
+  transform: scaleX(1);
+}
+
+html.motion-ready .section-header,
+html.motion-ready .project-card,
+html.motion-ready .workflow-step,
+html.motion-ready .skill-group,
+html.motion-ready .contact-card {
+  opacity: 0;
+  --reveal-y: 34px;
+  transition:
+    opacity 0.85s var(--motion-ease),
+    transform 0.95s var(--motion-ease),
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.45s var(--motion-ease);
+}
+
+html.motion-ready .section-header {
+  transform: translate3d(0, var(--reveal-y), 0);
+}
+
+html.motion-ready .project-card,
+html.motion-ready .workflow-step,
+html.motion-ready .skill-group,
+html.motion-ready .contact-card {
+  transform: perspective(1000px) translate3d(0, var(--reveal-y), 0) rotateX(1.5deg);
+}
+
+html.motion-ready .section.is-visible .section-header,
+html.motion-ready .section.is-visible .project-card,
+html.motion-ready .section.is-visible .workflow-step,
+html.motion-ready .section.is-visible .skill-group,
+html.motion-ready .section.is-visible .contact-card {
+  opacity: 1;
+  --reveal-y: 0px;
+}
+
+html.motion-ready .section.is-visible .project-card,
+html.motion-ready .section.is-visible .workflow-step,
+html.motion-ready .section.is-visible .skill-group,
+html.motion-ready .section.is-visible .contact-card {
+  transform: perspective(1000px) translate3d(0, 0, 0) rotateX(0deg);
+}
+
+html.motion-ready .project-card:nth-child(2),
+html.motion-ready .workflow-step:nth-child(2),
+html.motion-ready .skill-group:nth-child(2) { transition-delay: 70ms; }
+
+html.motion-ready .project-card:nth-child(3),
+html.motion-ready .workflow-step:nth-child(3),
+html.motion-ready .skill-group:nth-child(3) { transition-delay: 120ms; }
+
+html.motion-ready .project-card:nth-child(4),
+html.motion-ready .workflow-step:nth-child(4),
+html.motion-ready .skill-group:nth-child(4) { transition-delay: 170ms; }
+
+html.motion-ready .project-card:nth-child(5),
+html.motion-ready .workflow-step:nth-child(5),
+html.motion-ready .skill-group:nth-child(5) { transition-delay: 220ms; }
+
+html.motion-ready .project-card:nth-child(6),
+html.motion-ready .workflow-step:nth-child(6),
+html.motion-ready .skill-group:nth-child(6) { transition-delay: 270ms; }
+
+html.motion-ready .project-card:nth-child(7),
+html.motion-ready .workflow-step:nth-child(7) { transition-delay: 320ms; }
+
+.project-card,
+.workflow-step,
+.skill-group,
+.contact-card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.project-card:hover,
+.workflow-step:hover,
+.skill-group:hover {
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.18);
+}
+
+.project-card::after,
+.workflow-step::after,
+.skill-group::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(
+    240px circle at var(--card-light-x, 50%) var(--card-light-y, 50%),
+    rgba(255, 255, 255, 0.08),
+    transparent 68%
+  );
+}
+
+.project-card:hover::after,
+.workflow-step:hover::after,
+.skill-group:hover::after {
+  opacity: 1;
+}
+
+.workflow-step,
+.skill-group {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card h3,
+.workflow-step h3,
+.skill-group h3,
+.section-header h2 {
+  text-wrap: balance;
+}
+
+@media (max-width: 820px) {
+  .section::after {
+    opacity: 0.38;
+  }
+
+  .hero {
+    perspective: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body::after {
+    display: none;
+  }
+
+  .section::after,
+  .section > .container,
+  .hero-copy,
+  .hero-visual,
+  .hero-card,
+  .project-card,
+  .workflow-step,
+  .skill-group,
+  .contact-card,
+  .section-header {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  html.motion-ready .section-header,
+  html.motion-ready .project-card,
+  html.motion-ready .workflow-step,
+  html.motion-ready .skill-group,
+  html.motion-ready .contact-card {
+    opacity: 1 !important;
+  }
+}
