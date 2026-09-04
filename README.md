@@ -1,1 +1,0 @@
-# Alip Kamate Portfolio
