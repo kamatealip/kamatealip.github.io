@@ -3,308 +3,194 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Alip Kamate | Portfolio</title>
+    <meta name="theme-color" content="#09090b" />
     <meta
       name="description"
-      content="Portfolio of Alip Kamate, a Python Full Stack Developer &amp; Agentic GenAI Developer building production-ready AI agents, full-stack web applications, search systems, and scalable backends."
+      content="Alip Kamate — Python Developer and Agentic AI Engineer building APIs, AI agents, RAG systems, search engines, and production-focused web applications."
     />
+    <meta property="og:title" content="Alip Kamate | Python Developer & Agentic AI Engineer" />
+    <meta property="og:description" content="Python backend engineering, agentic AI workflows, RAG, search, and full-stack product development." />
+    <meta property="og:type" content="website" />
+    <title>Alip Kamate | Python Developer & Agentic AI Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon_io/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon_io/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon_io/favicon-16x16.png"
-    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main>
-      <header class="site-header" style="margin-bottom: 1rem">
-        <button
-          class="rect-mark"
-          type="button"
-          aria-label="Accent marker"
-        ></button>
-        <div class="site-header-copy">
-          <h1 style="margin-bottom: 0.4rem">Alip Kamate</h1>
-          <p style="margin: 0.1rem 0 0.4rem">
-            <strong>Python Full Stack Developer &amp; Agentic GenAI Developer</strong>
-          </p>
-          <p style="margin: 0.1rem 0">Jath, Sangli, Maharashtra &bull; Open to Remote / Relocation</p>
-          <p style="margin: 0.1rem 0">
-            Email:
-            <a href="mailto:kamatealip1@gmail.com">kamatealip1@gmail.com</a>
-          </p>
-          <p style="margin: 0.1rem 0 0.8rem">
-            Phone: <a href="tel:+917387705851">+91 7387705851</a>
-          </p>
-          <div class="highlights-box">
-            <p><strong>Target Roles:</strong> Python Developer, Full-Stack Engineer, GenAI / Agentic AI Engineer</p>
-            <p><strong>Quick Summary:</strong> I architect stateful AI agent workflows, high-performance search systems, robust REST APIs, and modern full-stack web applications.</p>
-            <p class="availability-tag">[ Available to join immediately for full-time roles &amp; internships ]</p>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="#top" aria-label="Alip Kamate home">
+          <span class="brand-mark">AK</span>
+          <span>alip<span class="brand-dot">.</span>dev</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#workflow">AI Workflow</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero container" id="top">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> Available for full-time roles &amp; internships</div>
+          <p class="hero-kicker">Python Developer · Agentic AI Engineer</p>
+          <h1>I build <span>backend systems</span> and <span>AI workflows</span> that turn complex ideas into usable products.</h1>
+          <p class="hero-lead">I work across Python, FastAPI, Flask, LLM orchestration, RAG, search, data systems, and modern full-stack applications — with a strong focus on clean architecture and production-ready engineering.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">View selected work</a>
+            <a class="button button-secondary" href="mailto:kamatealip1@gmail.com">Contact me</a>
+          </div>
+          <div class="hero-links" aria-label="Profile links">
+            <a href="https://github.com/kamatealip/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/kamatealip/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <span>Jath, Maharashtra · Open to remote / relocation</span>
           </div>
         </div>
-      </header>
 
-      <section>
-        <div class="section-heading">
-          <h2>Social</h2>
-          <hr />
-        </div>
-        <ul class="social-links">
-          <li>
-            <a
-              href="https://github.com/kamatealip/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/kamatealip/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-          </li>
-        </ul>
+        <aside class="hero-card" aria-label="Engineering focus">
+          <div class="code-window-bar"><span></span><span></span><span></span><small>agent.py</small></div>
+          <pre><code><span class="code-muted">workflow =</span> [
+  <span class="code-key">"understand"</span>,
+  <span class="code-key">"plan"</span>,
+  <span class="code-key">"retrieve"</span>,
+  <span class="code-key">"use_tools"</span>,
+  <span class="code-key">"act"</span>,
+  <span class="code-key">"validate"</span>,
+  <span class="code-key">"remember"</span>,
+]
+
+<span class="code-muted">stack =</span> {
+  <span class="code-key">"backend"</span>: <span class="code-string">"Python / FastAPI"</span>,
+  <span class="code-key">"agents"</span>: <span class="code-string">"LangGraph / LangChain"</span>,
+  <span class="code-key">"data"</span>: <span class="code-string">"PostgreSQL / Redis"</span>,
+}</code></pre>
+        </aside>
       </section>
 
-      <section>
-        <div class="section-heading">
-          <h2>Featured Projects</h2>
-          <hr />
+      <section class="section container" id="work">
+        <div class="section-header">
+          <div>
+            <p class="section-label">01 / Selected work</p>
+            <h2>Projects that show how I build.</h2>
+          </div>
+          <p class="section-note">Python systems, agentic AI, search, ML, and full-stack products.</p>
         </div>
-        <p>
-          Production-style software, AI agents, search engines, and full-stack
-          applications built with modern engineering practices.
-        </p>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/kamatealip/tripmind"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><strong>TripMind — Autonomous Agentic Travel Planner</strong></a
-            ><br />
-            Built a multi-agent travel assistant using <strong>LangGraph</strong>,
-            <strong>LangChain</strong>, and <strong>Gemini</strong>. Implemented
-            autonomous tool calling (Tavily search &amp; flight APIs), dynamic
-            itinerary generation, and stateful multi-turn persistence with
-            <strong>PostgreSQL</strong> checkpointing.
-            <ul class="tech-tags">
-              <li class="tech-tag">LangGraph</li>
-              <li class="tech-tag">LangChain</li>
-              <li class="tech-tag">Gemini API</li>
-              <li class="tech-tag">PostgreSQL</li>
-              <li class="tech-tag">Tavily Search</li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="https://github.com/kamatealip/scout"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><strong>Scout — Local Documentation Search Engine</strong></a
-            ><br />
-            Developed a fast local documentation search engine in <strong>Python</strong>
-            and <strong>Flask</strong>. Implemented BM25-style inverted-index ranking
-            over SQLite, regex-based keyword highlighting, snippet extraction, and
-            section filtering for sub-millisecond retrieval.
-            <ul class="tech-tags">
-              <li class="tech-tag">Python</li>
-              <li class="tech-tag">Flask</li>
-              <li class="tech-tag">SQLite</li>
-              <li class="tech-tag">BM25 Search</li>
-              <li class="tech-tag">Information Retrieval</li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="https://github.com/kamatealip/quickshow"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><strong>QuickShow — Full-Stack Movie Booking Platform</strong></a
-            ><br />
-            Created a full-stack web application with <strong>Next.js</strong>,
-            <strong>TypeScript</strong>, <strong>React</strong>, and
-            <strong>Supabase</strong>. Features real-time seat reservation locking,
-            relational PostgreSQL schemas, user authentication, and an admin
-            management dashboard.
-            <ul class="tech-tags">
-              <li class="tech-tag">Next.js</li>
-              <li class="tech-tag">TypeScript</li>
-              <li class="tech-tag">React</li>
-              <li class="tech-tag">Supabase</li>
-              <li class="tech-tag">PostgreSQL</li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="https://github.com/kamatealip/passnest"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><strong>PassNest — Secure Password Manager &amp; API</strong></a
-            ><br />
-            Built a full-stack security application with a <strong>FastAPI</strong>
-            backend and <strong>Svelte</strong> frontend. Implemented cryptographic
-            encryption, JWT-based authentication, password strength analysis, and
-            structured REST endpoints.
-            <ul class="tech-tags">
-              <li class="tech-tag">FastAPI</li>
-              <li class="tech-tag">Python</li>
-              <li class="tech-tag">Svelte</li>
-              <li class="tech-tag">JWT Auth</li>
-              <li class="tech-tag">Cryptography</li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="https://github.com/kamatealip/transaction-fraud-detection"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><strong>Transaction Fraud Detection Service</strong></a
-            ><br />
-            Engineered an ML fraud-scoring microservice with <strong>Flask</strong>,
-            <strong>XGBoost</strong>, and <strong>Scikit-learn</strong>. Implemented
-            feature validation pipelines, real-time risk classification, batch
-            inference endpoints, and automated decision actions.
-            <ul class="tech-tags">
-              <li class="tech-tag">Python</li>
-              <li class="tech-tag">XGBoost</li>
-              <li class="tech-tag">Scikit-learn</li>
-              <li class="tech-tag">Flask API</li>
-              <li class="tech-tag">Pandas</li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="https://github.com/kamatealip/signal-trade-engine"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><strong>Signal Trade Engine — Algorithmic Trading Bot</strong></a
-            ><br />
-            Implemented an automated CLI trading bot for Binance Futures Testnet
-            with market/limit order execution, real-time threshold watch mode,
-            robust error handling, and structured file/console logging.
-            <ul class="tech-tags">
-              <li class="tech-tag">Python</li>
-              <li class="tech-tag">Asyncio</li>
-              <li class="tech-tag">Binance API</li>
-              <li class="tech-tag">CLI Automation</li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="https://github.com/kamatealip/tiktokenizer"
-              target="_blank"
-              rel="noopener noreferrer"
-              ><strong>TikTokenizer — Byte Pair Encoding Tokenizer</strong></a
-            ><br />
-            Built a custom text tokenizer in Python implementing the
-            <strong>Byte Pair Encoding (BPE)</strong> algorithm from scratch for
-            vocabulary generation, subword tokenization, and text compression.
-            <ul class="tech-tags">
-              <li class="tech-tag">Python</li>
-              <li class="tech-tag">Byte Pair Encoding</li>
-              <li class="tech-tag">NLP</li>
-              <li class="tech-tag">Algorithms</li>
-            </ul>
-          </li>
-        </ul>
+
+        <div class="project-grid">
+          <article class="project-card project-card-featured">
+            <div class="project-topline"><span>Agentic AI</span><span>01</span></div>
+            <h3>TripMind</h3>
+            <p>Multi-agent travel planning system using LangGraph, LangChain, Gemini, Tavily search, flight tools, and PostgreSQL-backed state persistence.</p>
+            <div class="tag-row"><span>LangGraph</span><span>Python</span><span>Gemini</span><span>PostgreSQL</span></div>
+            <a class="project-link" href="https://github.com/kamatealip/tripmind" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>Search / IR</span><span>02</span></div>
+            <h3>Scout</h3>
+            <p>Local documentation search engine with Python, Flask, SQLite, inverted indexing, ranking, snippets, highlighting, and section-aware retrieval.</p>
+            <div class="tag-row"><span>Python</span><span>Flask</span><span>SQLite</span><span>BM25-style ranking</span></div>
+            <a class="project-link" href="https://github.com/kamatealip/scout" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>Product</span><span>03</span></div>
+            <h3>Attendance Manager</h3>
+            <p>Attendance management product being built incrementally with a modern Next.js UI, daily attendance flows, and persistent local state.</p>
+            <div class="tag-row"><span>Next.js</span><span>TypeScript</span><span>React</span><span>Product UI</span></div>
+            <a class="project-link" href="https://github.com/kamatealip/attendance-manager" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>Full Stack</span><span>04</span></div>
+            <h3>QuickShow</h3>
+            <p>Movie booking platform with Next.js, TypeScript, Supabase, authentication, real-time seat availability, PostgreSQL data models, and admin workflows.</p>
+            <div class="tag-row"><span>Next.js</span><span>Supabase</span><span>PostgreSQL</span><span>Auth</span></div>
+            <a class="project-link" href="https://github.com/kamatealip/quickshow" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>Security</span><span>05</span></div>
+            <h3>PassNest</h3>
+            <p>Secure password manager and API using FastAPI and Svelte, with JWT authentication, cryptographic protection, and password-strength analysis.</p>
+            <div class="tag-row"><span>FastAPI</span><span>Python</span><span>Svelte</span><span>JWT</span></div>
+            <a class="project-link" href="https://github.com/kamatealip/passnest" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-topline"><span>Machine Learning</span><span>06</span></div>
+            <h3>Transaction Fraud Detection</h3>
+            <p>Fraud-scoring service with Flask, XGBoost, and scikit-learn for validated real-time risk classification and batch inference workflows.</p>
+            <div class="tag-row"><span>Python</span><span>XGBoost</span><span>Flask</span><span>Pandas</span></div>
+            <a class="project-link" href="https://github.com/kamatealip/transaction-fraud-detection" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+          </article>
+        </div>
       </section>
 
-      <section>
-        <div class="section-heading">
-          <h2>Technical Skills</h2>
-          <hr />
+      <section class="section section-alt" id="workflow">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-label">02 / Agentic AI workflow</p>
+              <h2>From prompt to action, not just prompt to text.</h2>
+            </div>
+            <p class="section-note">The engineering pattern I use for agentic systems.</p>
+          </div>
+
+          <div class="workflow-grid">
+            <article class="workflow-step"><span>01</span><h3>Understand</h3><p>Parse the user's goal, constraints, context, and required output.</p></article>
+            <article class="workflow-step"><span>02</span><h3>Plan</h3><p>Break the request into a stateful sequence of tasks and decisions.</p></article>
+            <article class="workflow-step"><span>03</span><h3>Retrieve</h3><p>Bring in trusted context using RAG, search, databases, or APIs.</p></article>
+            <article class="workflow-step"><span>04</span><h3>Use tools</h3><p>Call external tools such as search, flight, data, or application services.</p></article>
+            <article class="workflow-step"><span>05</span><h3>Act</h3><p>Generate the next action, structured result, or product-side change.</p></article>
+            <article class="workflow-step"><span>06</span><h3>Validate</h3><p>Check tool outputs, schemas, business rules, and failure paths.</p></article>
+            <article class="workflow-step"><span>07</span><h3>Remember</h3><p>Persist useful state so multi-turn workflows can continue reliably.</p></article>
+          </div>
         </div>
-        <ul>
-          <li>
-            <strong>Generative AI &amp; Agentic Systems</strong><br />
-            LangGraph, LangChain, Multi-Agent Systems, Autonomous Tool-Calling
-            Agents, RAG (Retrieval-Augmented Generation), Gemini API, OpenAI /
-            Claude, Vector Databases (pgvector, ChromaDB, Pinecone, Qdrant),
-            Hybrid Search (BM25 + Dense Vectors), Tavily AI Search, Prompt
-            Engineering, Tokenization (BPE / Tiktoken), LLM Guardrails
-          </li>
-          <li>
-            <strong>Backend &amp; Python Engineering</strong><br />
-            Python (Asyncio, OOP), FastAPI, Flask, RESTful APIs, WebSockets,
-            Pydantic, SQLAlchemy, Celery, Redis, Microservices Architecture,
-            Background Workers, PyTest
-          </li>
-          <li>
-            <strong>Frontend &amp; Full Stack Development</strong><br />
-            TypeScript, JavaScript (ES6+), React.js, Next.js, Svelte /
-            SvelteKit, HTML5, CSS3, Tailwind CSS, State Management, Responsive
-            UI, REST &amp; API Integration
-          </li>
-          <li>
-            <strong>Databases &amp; Data Engineering</strong><br />
-            PostgreSQL, Supabase, SQLite, Redis, Vector Databases, SQL Query
-            Optimization, Pandas, NumPy, Data Pipelines &amp; ETL
-          </li>
-          <li>
-            <strong>AI Tools &amp; Coding Assistants</strong><br />
-            Cursor AI, Claude, Antigravity, OpenCode, Codex
-          </li>
-          <li>
-            <strong>DevOps, Cloud &amp; Tooling</strong><br />
-            Docker, Git &amp; GitHub, Linux / Bash Scripting, CI/CD, Postman,
-            Vercel, Cloud Deployment
-          </li>
-        </ul>
       </section>
 
-      <section>
-        <div class="section-heading">
-          <h2>Education</h2>
-          <hr />
+      <section class="section container" id="skills">
+        <div class="section-header">
+          <div>
+            <p class="section-label">03 / Technical stack</p>
+            <h2>What I work with.</h2>
+          </div>
         </div>
-        <ul>
-          <li>
-            <strong>Bachelor of Computer Applications</strong>, Shivaji
-            University, Kolhapur — 7.58/10 CGPA
-          </li>
-          <li>
-            <strong>HSC Science</strong>, Raje Ramrao College, Jath — 8.51/10
-            GPA
-          </li>
-        </ul>
+        <div class="skills-grid">
+          <div class="skill-group"><h3>Python &amp; Backend</h3><p>Python · FastAPI · Flask · Asyncio · REST APIs · WebSockets · Pydantic · SQLAlchemy · Celery · Redis · PyTest</p></div>
+          <div class="skill-group"><h3>Agentic AI &amp; RAG</h3><p>LangGraph · LangChain · Multi-agent systems · Tool calling · RAG · Hybrid search · Vector databases · Gemini · OpenAI · Claude · Guardrails</p></div>
+          <div class="skill-group"><h3>Data &amp; ML</h3><p>PostgreSQL · SQLite · Supabase · Pandas · NumPy · scikit-learn · XGBoost · ETL · Data pipelines</p></div>
+          <div class="skill-group"><h3>Frontend &amp; Product</h3><p>TypeScript · JavaScript · React · Next.js · Svelte / SvelteKit · Tailwind CSS · Responsive UI</p></div>
+          <div class="skill-group"><h3>DevOps &amp; Tooling</h3><p>Docker · Git · GitHub · Linux · Bash · CI/CD · Postman · Vercel · Cloud deployment</p></div>
+          <div class="skill-group"><h3>AI Development Tools</h3><p>Codex · Cursor · Claude · OpenCode · Antigravity</p></div>
+        </div>
       </section>
 
-      <section>
-        <div class="section-heading">
-          <h2>Current Focus &amp; Interests</h2>
-          <hr />
+      <section class="section section-contact" id="contact">
+        <div class="container contact-card">
+          <div>
+            <p class="section-label">04 / Contact</p>
+            <h2>Have a Python, backend, or agentic AI problem to solve?</h2>
+            <p>I'm open to full-time roles, internships, and serious engineering collaborations.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:kamatealip1@gmail.com">kamatealip1@gmail.com</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/kamatealip/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
         </div>
-        <p>
-          Exploring multi-agent orchestration architectures, autonomous tool-calling systems,
-          custom RAG &amp; search algorithms, open-source development, and automotive tech.
-        </p>
       </section>
     </main>
-    <footer class="site-footer">
-      <p>© 2026 Alip Kamate. All rights reserved.</p>
+
+    <footer class="footer container">
+      <span>© 2026 Alip Kamate</span>
+      <span>Built with HTML + CSS · Hosted on GitHub Pages</span>
     </footer>
   </body>
 </html>
